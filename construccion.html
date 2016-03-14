@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Robik - root imprimible</title>
+        <title>Robik - Un robot imprimible que puede mover el cubo de Rubik</title>
 
         <!-- Bootstrap -->
         <!-- Latest compiled and minified CSS -->
@@ -25,7 +25,7 @@
         <![endif]-->
     </head>
     <body>
-        
+
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,18 +42,23 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#">Materiales</a></li>
-                    <li class="active"><a href="construccion.html">Construccion</a></li>
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="materiales.html">Materiales</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Construcci&oacute;n<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="construccion.html">Mec&aacute;nica</a></li>
+                            <li><a href="electronica.html">Electr&oacute;nica</a></li>
+                        </ul>
+                    </li>
                     <li><a href="firmware.html">Firmware</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enlaces <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Contacto</a></li>
+                            <li><a href="https://facebook.com/recunchomaker">Facebook</a></li>
+                            <li><a href="https://twitter.com/RecunchoMaker">Twitter</a>
+                            <li><a href="https://flickr.com/recunchomaker">Flickr</a>
                         </ul>
                     </li>
                 </ul>
@@ -61,14 +66,6 @@
             </div><!-- /.container-fluid -->
         </nav>
             
-        <div class="container">
-            <span class="visible-lg">lg - Large (1170px / 95px columna)</span>
-            <span class="visible-md">md - Medium (970px / 75x columna)</span>
-            <span class="visible-sm">sm - Small (750px / 60px columna)</span>
-            <span class="visible-xs">xs - Extra-small (< 768 pixeles . Ancho automatico)</span>
-            <span class="visible-print">Print</span>
-        </div>
-
 <!-- END inicio -->
 
         <div class="container">
@@ -247,7 +244,7 @@
                 <div class="col-sm-6">
                     <h4>Voil&agrave;</h4>
                     <p>
-                        Y ya est&aacute;! Bueno: al menos una parte importante. "S&oacute;lo" nos falta montar la electr&oacute;nica y subir el firmware. 
+                        Y ya est&aacute;! Bueno: al menos una parte importante. "S&oacute;lo" nos falta <a href="electronica.html">montar la electr&oacute;nica</a> y subir el <a href="firmware.html">firmware</a>. 
                     </p>
                 </div>
             </div>

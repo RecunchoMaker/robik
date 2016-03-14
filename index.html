@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Robik - Robot imprimible que puede mover el cubo de Rubik</title>
+        <title>Robik - Un robot imprimible que puede mover el cubo de Rubik</title>
 
         <!-- Bootstrap -->
         <!-- Latest compiled and minified CSS -->
@@ -25,7 +25,29 @@
         <![endif]-->
     </head>
     <body>
-        
+
+        <!-- Modal pagina en construccion -->
+        <div id="enconstruccion" class="modal show" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content panel-danger">
+              <div id="kaka" class="modal-header panel-heading">
+                <button type="button" onclick="$('div#enconstruccion').removeClass('show')" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">P&aacute;gina en construcci&oacute;n!</h4>
+              </div>
+              <div class="modal-body">
+                  <p>El material que aparece en esta p&aacute;gina est&aacute; incompleto y sujeto a muchos cambios.</p>
+                  <p>Estamos trabajando para tener lista la documentaci&oacute;n de Robik el d&iacute;a en Abril de 2016.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="$('div#enconstruccion').removeClass('show')" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>        
+
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -44,16 +66,21 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#">Inicio</a></li>
                     <li><a href="materiales.html">Materiales</a></li>
-                    <li><a href="construccion.html">Construccion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Construcci&oacute;n<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="construccion.html">Mec&aacute;nica</a></li>
+                            <li><a href="electronica.html">Electr&oacute;nica</a></li>
+                        </ul>
+                    </li>
                     <li><a href="firmware.html">Firmware</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enlaces <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Contacto</a></li>
+                            <li><a href="https://facebook.com/recunchomaker">Facebook</a></li>
+                            <li><a href="https://twitter.com/RecunchoMaker">Twitter</a>
+                            <li><a href="https://flickr.com/recunchomaker">Flickr</a>
                         </ul>
                     </li>
                 </ul>
@@ -61,14 +88,6 @@
             </div><!-- /.container-fluid -->
         </nav>
             
-        <div class="container">
-            <span class="visible-lg">lg - Large (1170px / 95px columna)</span>
-            <span class="visible-md">md - Medium (970px / 75x columna)</span>
-            <span class="visible-sm">sm - Small (750px / 60px columna)</span>
-            <span class="visible-xs">xs - Extra-small (< 768 pixeles . Ancho automatico)</span>
-            <span class="visible-print">Print</span>
-        </div>
-
 <!-- END inicio -->
 
 
@@ -77,8 +96,8 @@
             <div class="row">
                <div class="col-md-12">
                    <div class="bg-title">
-                       <h1 class="shadow">Robik</h1>
-                       <h3 class="shadow text-sm-center">El robot imprimible que puede mover el cubo de Rubik</h3>
+                       <h1 class="shadow text-sm-center">Robik</h1>
+                       <h3 class="shadow text-sm-center text-sm-pequeno">El robot imprimible que puede mover el cubo de Rubik</h3>
                    </div>
                    <div>
                        <div class="bg-foto"></div>

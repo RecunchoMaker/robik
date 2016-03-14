@@ -5,8 +5,8 @@
 
 @media (max-width: 768px) {
     .text-sm-left { text-align: left; }
-    .text-sm-right { text-align: right; }
-    .text-sm-center { text-align: center; font-size: 15px; }
+    .text-sm-pequeno { text-align: right; font-size: 18px; }
+    .text-sm-center { text-align: center; }
     .text-sm-justify { text-align: justify; }
 }
 

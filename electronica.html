@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!-- BEGIN inicio -->
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Robik - Un robot imprimible que puede mover el cubo de Rubik</title>
+
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <link href="css/custom.css" rel="stylesheet">
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="http//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>script>
+            <script src="http//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Robik</a>
+                </div>
+        
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="materiales.html">Materiales</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Construcci&oacute;n<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="construccion.html">Mec&aacute;nica</a></li>
+                            <li><a href="electronica.html">Electr&oacute;nica</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="firmware.html">Firmware</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enlaces <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://facebook.com/recunchomaker">Facebook</a></li>
+                            <li><a href="https://twitter.com/RecunchoMaker">Twitter</a>
+                            <li><a href="https://flickr.com/recunchomaker">Flickr</a>
+                        </ul>
+                    </li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+            
+<!-- END inicio -->
+
+        <div class="container">
+
+
+            <h2>Parte electr&oacute;nica</h2>
+            <div class="row">
+                <div class="col-sm-6">
+                        <img src="img/elec-020-circuito.png" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-6">
+                    <h4>El circuito</h4>
+                    <p>
+                        Este es un esquema de las conexiones de nuestro circuito. Simplemente tendremos que conectar los servos a 5v, el cable de se&ntilde;al de cada uno de ellos a un pin <i>pwm</i> del arduino (en este caso hemos elegido el 4,5 y 7), 12v en la entrada correspondiente del driver y conectar todas las tierras (los servos, el driver, y el arduino). Las entradas IN1, IN2, IN3 e IN4 del driver las conectamos a los pines 8, 9, 10 y 11 del arduino.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-010-fuente.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-xs-8">
+                    <h4>Un poco de Arduino y alimentaci&oacute;n</h4>
+                    <p>
+                        La dificultad principal de esta parte es, precisamente, decidir c&oacute;mo vamos a alimentar nuestro circuito, teniendo en cuenta que se necesitan 12v para el motor y 5v para los servos y el arduino.
+                    </p>
+                    <p>
+                        En principio, este robot estar&aacute; siempre conectado a un ordenador a trav&eacute;s del puerto USB, que puede proporcionar hasta 500mA de corriente. Dado que un servo puede necesitar del orden de 120mA, con tres servos mas el propio consumo del arduino estamos en el l&iacute;mite de la especificaci&oacute;n USB, as&iacute; que hemos decidido proporcionar los 5v a los servos con una fuente de alimentaci&oacute;n externa.
+                    </p>
+                    <p>
+                        Tambi&eacute;n necesitamos 12v para alimentar el motor. Como necesitamos dos voltajes, una opci&oacute;n muy c&oacute;moda es utilizar una fuente ATX de cualquier ordenador viejo. Hay muchos tutoriales en internet de c&oacute;mo utilizar las fuentes ATX como fuentes de laboratorio. Y si no quieres estropear tu fuente, siempre puedes utilizar placas como la ATX Board de staticboards.com que se enchufa directamente al conector de la fuente y ofrece conectores con los distintos voltajes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-030-materiales.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Preparando un <i>escudo</i></h4>
+                    <p>
+                        Para facilitar las conexiones y minimizar un poco el <i>efecto spaghetti</i> vamos a construir un escudo muy sencillo, que podremos pinchar en nuestro arduino, y que dispondr&aacute; de los conectores para enchufar directamente los servos y el motor.
+                    </p>
+                    <p>
+                        Utilizamos una peque&ntilde;a placa perfboard, una tira de pines macho y las herramientas habituales (soldador, tijeras, alicates, un poco de esta&ntilde;o, cable). Tambi&eacute;n es muy comveniente disponer de un pol&iacute;metro para comprobar que las conexi&oacute;nes est&aacute;n perfectamente soldadas y no hay cortocircuitos.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-040-pines.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Preparando los pines</h4>
+                    <p>
+                        Utilizamos unos alicates para cortar la tira de pines en trocitos. Necesitaremos una tira de 6 pines, 2 de 4, 3 de 3, 1 de 2 y 1 de uno.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-050-alinear3.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Alineando la primera hilera</h4>
+                    <p>
+                        Lo primero que vamos a alinear es la fila de pines que ir&aacute;n conectadas a la se&ntilde;al de los servos y a los motores. F&iacute;jate que en los conectores del arduino UNO no se pueden hacer coincidir exactamente con los agujeros de la perfboard. Esto lo arreglaremos al final <i>doblando</i> un poco los pines de nuestro escudo.
+                    </p>
+                    <p>
+                        De lo que se trata aqu&iacute; es de ver en qu&eacute; sitio vamos a empezar a soldar, dejando un agujero en la perfboard entre la hilera de 4 y la de 6 pines.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-060-empezando-soldar.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Empezando a soldar</h4>
+                    <p>
+                        Comenzamos a soldar los pines a la perfboard. Suelda primero los pines de los extremos, aseg&uacute;rate que est&aacute;n perfectamente alineados y luego suelda el resto.
+                    </p>
+                    <p>
+                        Los pines no est&aacute;n puestos al rev&eacute;s en la foto: lo que hacemos es soldar <strong>la parte larga</strong> del pin a la placa, y al final del trabajo (una vez soldados todos los cables) empujaremos la parte de pl&aacute;stico negro hacia abajo para que la parte que asome haga contacto perfectamente con los conectores del arduino.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-070-motor2.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Uniendo los pines de los motores</h4>
+                    <p>
+                        La hilera de 4 pines es la que finalmente se conectar&aacute; con las entrdas IN1, IN2, IN3 e IN4 del driver. Ponemos otra hilera de 4 pines en el lado contrario de la placa y conectamos uno a uno ambas hileras.
+                    </p>
+                    <p>
+                        Es conveniente ayudarse de un trozo de cable para hacer el puente entre los dos pines.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-080-pines-servo-front.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Pines para los servos</h4>
+                    <p>
+                        Continuamos colocando tres hileras de 3 pines en donde ir&aacute;n conectados los servos. F&iacute;jate en la foto que aparecen dos hileras juntas y otra separada, para que est&eacute;n alineadas correctamente con los pines pwm del arduino (4, 5 y 7 en este caso)
+                    </p>
+                    <p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-090-tierras.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>M&aacute;s conexiones para los servos</h4>
+                    <p>
+                        Unimos los pines que ir&aacute;n pinchados en el arduino (la hilera de 6) al pin m&aacute;s cercano de cada hilera de 3 que colocamos en la parte contraria. Este ser&aacute; el pin de se&ntilde;al.
+                    </p>
+                    <p>
+                        Adem&aacute;s, soldamos conjuntamente todos los pines centrales de cada hilera de 3, que se corresponden con los 5v, y los pines restantes de la misma hilera, que se corresponde con la tierra. Como hizimos anteriormente, utilizamos un trozo cable que nos facilite la soldadura.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-100-pintierra.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Colocando el pin de tierra y el conector de 12v</h4>
+                    <p>
+                        Para conectar la tierra de nuestra fuente (que ir&aacute; conecctada a la perfboard) necesitamos sacar un pin que se conectar&aacute; a la tierra del Arduino. Para colocar correctamente este pin, lo enchufamos a la una entrada GND del arduino, presentamos la placa y anotamos la fila en la que tendr&aacute; que ir soldado nuestro pin.
+                    </p>
+                    <p>
+                        Tambi&eacute;n colocamos la hilera de dos pines al lado de los conectores de los servos. Este conector nos proporcionar&aacute; los 12v que llevaremos al driver del motor.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-110-cable-12v.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Conectando el pin de 12v</h4>
+                    <p>
+                        Ya s&oacute;lo nos falta soldar tres cables a nuestra placa (tierra, 5v y 12v) que ser&aacute;n los que conectemos a nuestra fuente de alimentaci&oacute;n
+                    </p>
+                    <p>
+                        Pelamos un trozo de cable, lo pasamos por uno de los agujeros del borde de la placa y lo soldamos. Desde esa misma soldadura sacamos un cable que uniremos a uno de los pines de la hilera de 2 (esta ser&aacute; la toma de 12v para el driver) 
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-120-cable5v.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Conectado los pines de 5v de los servos</h4>
+                    <p>
+                        De la misma manera, colocamos otro cable desde la parte de atr&aacute;s de la placa (la parte que <strong>no</strong> tiene cobre), lo soldamos y unimos esta soldadura a la hilera del medio de los conectores de 3 pines (de los servos). Este ser&aacute; el cable que alimentar&aacute; los servos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-135-cabletierra.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Conectado la tierra</h4>
+                    <p>
+                        S&oacute;lo falta conectar un nuevo cable al pin "suelto" (que es el que pincha en la tierra del arduino). Adem&aacute;s conectaremos esta tierra al pin que queda de nuestro conector de 12v y a la hilera de los servos que tambi&eacute;n falta. F&iacute;jate en la foto que colocamos el cable en el medio de la hilera de tierras de los servos y la tierra del conector de 12v. As&iacute; uniremos f&aacute;cilmente las estas dos tierras.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-137-doblarpines.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Doblar los pines</h4>
+                    <p>
+                        Para que el escudo encaje en el arduino, debemos acercar suavemente los pines de la hilera de 6 y 4. Utiliza las u&ntilde;as, de 2 en dos, y d&oacute;blalos un pel&iacute;n hasta que compruebes que entran perfectamente
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                        <img src="img/elec-140-comprobarconexiones.jpg" class="img-thumbnail" alt="Responsive image">
+                </div>
+                <div class="col-sm-8">
+                    <h4>Y ya est&aacute;</h4>
+                    <p>
+                        Ya tenemos la parte electr&oacute;nica montada. Comprueba con un pol&iacute;metro que <strong>todas</strong> las conexiones est&aacute;n bien hechas. Utiliza el esquema del principio de la p&aacute;gina para guiarte. Sobre todo, aseg&uacute;rate que no hay ning&uacute;n cortocircuito entre las conexiones de tierra, 5v y 12v.
+                    </p>
+                    <p>
+                        Ya s&oacute;lo falta instalar el <a href="firmware.html">firmware</a>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+            <!-- BEGIN footer -->
+            <div id="footer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <p>2016 · <a href="recunchomaker.org">recunchomaker.com</a> · Santiago de Compostela · Galicia · Espa&ntilde;a</p>
+<a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">Licencia Creative Commons Attribution-ShareAlike 4.0</a>
+
+</p>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
+                <a href="https://facebook.com/recunchomaker"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/RecunchoMaker"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://flickr.com/recunchomaker"><i id="social-fl" class="fa fa-flickr fa-3x social"></i></a>
+                    </div>
+                </div>
+            </div>
+                                  
+        </div>
+            
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+            <!-- END footer -->
