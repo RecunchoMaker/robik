@@ -26,6 +26,28 @@
     </head>
     <body>
 
+        <!-- Modal pagina en construccion -->
+        <div id="enconstruccion" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content panel-danger">
+              <div id="kaka" class="modal-header panel-heading">
+                <button type="button" onclick="$('div#enconstruccion').removeClass('show')" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">P&aacute;gina en construcci&oacute;n!</h4>
+              </div>
+              <div class="modal-body">
+                  <p>El material que aparece en esta p&aacute;gina est&aacute; incompleto y sujeto a muchos cambios.</p>
+                  <p>Estamos trabajando para tener lista la documentaci&oacute;n de Robik el d&iacute;a en Abril de 2016.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="$('div#enconstruccion').removeClass('show')" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>        
+
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,7 +64,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="materiales.html">Materiales</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Construcci&oacute;n<b class="caret"></b></a>
@@ -274,6 +296,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script>
+            $(function() {
+                var pgurl = window.location.href.substr(window.location.href
+                        .lastIndexOf("/")+1);
+                $("nav div li a").each(function(){
+                    if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
+                        if($(this).parent().parent().attr('class')=="dropdown-menu") {
+                            $(this).parent().parent().parent().addClass("active");
+                            $(this).parent().addClass("active");
+                        } else {
+                            $(this).parent().addClass("active");
+                    }
+                    }
+                })
+            });
+        </script>
     </body>
 </html>
 

@@ -26,6 +26,28 @@
     </head>
     <body>
 
+        <!-- Modal pagina en construccion -->
+        <div id="enconstruccion" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content panel-danger">
+              <div id="kaka" class="modal-header panel-heading">
+                <button type="button" onclick="$('div#enconstruccion').removeClass('show')" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">P&aacute;gina en construcci&oacute;n!</h4>
+              </div>
+              <div class="modal-body">
+                  <p>El material que aparece en esta p&aacute;gina est&aacute; incompleto y sujeto a muchos cambios.</p>
+                  <p>Estamos trabajando para tener lista la documentaci&oacute;n de Robik el d&iacute;a en Abril de 2016.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="$('div#enconstruccion').removeClass('show')" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>        
+
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,7 +64,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="materiales.html">Materiales</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Construcci&oacute;n<b class="caret"></b></a>
@@ -68,29 +90,19 @@
             
 <!-- END inicio -->
 
-
         <div class="container">
 
+<div class="container">
+    <span class="visible-lg">lg - Large (1170px / 95px columna)</span>
+    <span class="visible-md">md - Medium (970px / 75x columna)</span>
+    <span class="visible-sm">sm - Small (750px / 60px columna)</span>
+    <span class="visible-xs">xs - Extra-small (< 768 pixeles . Ancho automatico)</span>
+    <span class="visible-print">Print</span>
+</div>
 
             <h2>Piezas impresas</h2>
             <p>Las piezas pueden imprimirse tanto en PLA como en ABS. Con un 20% de relleno es suficiente.</p>            
 <!--
-            <div class="col-sm-4">
-                <div class="col-sm-6">
-                        <img src="img/png-piezas/apoyo-grua.png" class="img-thumbnail" alt="Responsive image">
-                </div>
-                <div class="col-sm-6">
-                    <h5>
-                        pieza-tal.stl
-                    </h5v>
-                    <p>
-                        En la base cuadrada hay ocho huecos para encajar estas piezas, aunque a nosotros nos funciona bien simplemente con cuatro, coloc&aacute;ndolas en dos esquinas enfrentadas.
-                    </p>
-                    <p>
-                        Cantidad: 1
-                    </p>
-                </div>
-            </div>
             <div class="col-sm-4">
                 <div class="col-sm-6">
                         <img src="img/png-piezas/apoyo-grua.png" class="img-thumbnail" alt="Responsive image">
@@ -135,11 +147,39 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td><img src="img/png-piezas/soportes-laterales.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>
+                            <h4>soportes-laterales.stl</h4>
+                        <p>Necesitas dos piezas sim&eacute;tricas. Ojo, no son iguales porque tienen un peque&ntilde;o reborde que impide que el rodamiento se salga en caso de que haya cierta holgura.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/png-piezas/hombros.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>
+                            <h4>hombros.stl</h4>
+                        <p>Los hombros se colocan entre los dos soportes laterales, y sostienen el servo que mueve las pinzas. Adem&aacute;s dan soporte a los rodamientos en los que encajan los brazos</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/png-piezas/soportes-laterales.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>
+                            <h4>brazos-xxx.stl</h4>
+                            <p>Los brazos encajan en los rodamientos de los hombros. El brazo izquierdo tiene un hueco para alojar el servo que mueve la <i>mu&ntilde;eca</i>.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/png-piezas/soportes-laterales.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>
+                            <h4>soporte-grua-xxx.stl</h4>
+                            <p>Esta pieza tambi&eacute;n aloja un servo, que es el que tira de la polea conectada a los hombros para permitir que los brazos suban y bajen.</p>
+                        </td>
+                    </tr>
+                    <tr>
                         <td><img src="img/png-piezas/apoyo-grua.png" class="img-thumbnail" alt="Responsive image"></td>
                         <td>
                             apoyo-grua.stl
                         <p>1</p>
-                        <p>Esta pieza esta atornillada en el hombro y enganchada al servo trasero, el cual hace palanca para poder subrir y bajar los brazos</p>
+                        <p>Esta pieza esta atornillada en el hombro y enganchada al servo trasero.</p>
                     </td>
                     </tr>
                     <tr>
@@ -151,25 +191,17 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="img/png-piezas/enganche-servo-pinza.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td><img src="img/png-piezas/solapas-base.png" class="img-thumbnail" alt="Responsive image"></td>
                         <td>
-                            enganche-servo-pinza.stl
-                        <p>1</p>
-                        <p>Pieza que facilita la uni&oacute;n del servo de la pinza con los brazos. Est&aacute; pegada a la aspa del servo</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/rueda-dentada-pequena.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            rueda-dentada-pequena.stl
-                        <p>1</p>
-                        <p>Esta pieza encaja en el eje del motor, y engrana con la rueda dentada grande que mueve la base</p>
+                            solapas-base.stl
+                        <p>4</p>
+                        <p>Hay ocho huecos en la base cuadrada para estas piezas, aunque nosotros hemos comprobado que con cuatro es suficiente</p>
                         </td>
                     </tr>
                     <tr>
                         <td><img src="img/png-piezas/solapas-base.png" class="img-thumbnail" alt="Responsive image"></td>
                         <td>
-                            solapas-base.stl
+                            rueda-dentada-grande-xxxxx
                         <p>4</p>
                         <p>Hay ocho huecos en la base cuadrada para estas piezas, aunque nosotros hemos comprobado que con cuatro es suficiente</p>
                         </td>
@@ -183,11 +215,35 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="img/png-piezas/soportes-laterales.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td><img src="img/png-piezas/soporte-motor.png" class="img-thumbnail" alt="Responsive image"></td>
                         <td>
-                            soportes-laterales.stl
-                        <p>2</p>
-                        <p>Necesitas dos piezas sim&eacute;tricas. Ojo, no son iguales porque tienen un peque&tilde;o reborde que impide que el rodamiento se salga en caso de que haya cierta holgura al meter el rodamiento.</p>
+                            capuchon-xxxxx.stl
+                        <p>1</p>
+                        <p>En esta pieza encaja nuestro motor y el rodamiento que aloja la rueda dentada grande</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/png-piezas/enganche-servo-pinza.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>
+                            enganche-servo-pinza.stl
+                        <p>1</p>
+                        <p>Pieza que facilita la uni&oacute;n del servo de la pinza con los brazos. Est&aacute; pegada a la aspa del servo</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/png-piezas/enganche-servo-pinza.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>
+                            plaquitas-xxxxx
+                        <p>1</p>
+                        <p>Pieza que facilita la uni&oacute;n del servo de la pinza con los brazos. Est&aacute; pegada a la aspa del servo</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/png-piezas/rueda-dentada-pequena.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>
+                            rueda-dentada-pequena.stl
+                        <p>1</p>
+                        <p>Esta pieza encaja en el eje del motor, y engrana con la rueda dentada grande que mueve la base</p>
                         </td>
                     </tr>
                 </tbody>
@@ -208,12 +264,25 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="img/png-piezas/polea-servo-grua.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Rodamientos ULL8800</td>
-                        <td>3</td>
-                        <td>1 &euro; cada uno</td>
-                        <td>aliexpress.com</td>
-                        <td>Los rodamientos encajan en los soportes de tal sitio</td>
+                        <td><img src="img/vit-rodamientos.jpg" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>Rodamientos 8x22x7</td>
+                        <td>6</td>
+                        <td>< 1 &euro;</td>
+                        <td>Hacen falta 6 rodamientos axiales. No es necesario que sean de muy buena calidad ya que no van a soportar grandes fuerzas. La referencia 8x22x7 se refiere a las medidas del rodamiento (di&aacute;metro del agujero, di&aacute;metro exterior y ancho).</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/vit-tornillos.jpg" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>Tornillos y tuercas M3</td>
+                        <td>Varios</td>
+                        <td>< 1 &euro;</td>
+                        <td>Necesitas varios tornillos y tuercas M3. Puedes comprarlos en muchas ferreter&iacute;as. Nosotros los utilizamos con cabeza hexagonal (para llaves allen). Si quieres comprar una buena cantidad, para futuros proyectos, <a href="rationalstock.es">rationalstock.es</a> tiene buenos precios.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="img/vit-tabla.jpg" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>Base de madera</td>
+                        <td>1</td>
+                        <td>< 1 &euro;</td>
+                        <td>Utiliza cualquier trozo de madera (melamina, dmf...) para atornillar la estructura. La medida m&iacute;nima es xxx aunque es preferible usar una algo m&aacute;s grande para dejar hueco para el arduino y futuras ampliaciones (una botonera, un display, un soporte para c&aacute;mara web...)</td>
                     </tr>
                 </tbody>
             </table>
@@ -232,46 +301,40 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="img/png-piezas/polea-servo-grua.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td><img src="img/elec-arduino.jpg" class="img-thumbnail" alt="Responsive image"></td>
                         <td>Arduino UNO</td>
                         <td>1</td>
                         <td>Podr&aacute;s utilizar cualquier tipo de Arduino que tenga al menos siete salidas digitales (3 de ellas pwm). </td>
                     </tr>
                     <tr>
-                        <td><img src="http://lorempixel.com/100/100" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Driver de motor paso a paso</td>
+                        <td><img src="img/elec-motor.jpg" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>Motor paso a paso xxx</td>
                         <td>1</td>
-                        <td>Este motor lo puedes encontrar en alguna impresora vieja</td>
+                        <td>Este es un motor paso a paso <i>bipolar</i> que tiene la ventaja de que tiene muy poca altura. La referencia es pm35s-048-hpl2</td>
                     </tr>
                     <tr>
-                        <td><img src="http://lorempixel.com/100/100" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Motor paso a paso</td>
+                        <td><img src="img/elec-driver.jpg" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>Driver de motor basada en ULN2003</td>
                         <td>1</td>
-                        <td>Este motor lo puedes encontrar en alguna impresora vieja</td>
+                        <td>Esta placa sirve de interface entre el arduino y el motor.</td>
                     </tr>
                     <tr>
-                        <td><img src="http://lorempixel.com/100/100" class="img-thumbnail" alt="Responsive image"></td>
+                        <td><img src="img/elec-servo.jpg" class="img-thumbnail" alt="Responsive image"></td>
                         <td>Servos 9g</td>
                         <td>3</td>
                         <td>Necesitas 3 servos para la mu&ntilde;eca, las pinzas y la gr&uacute;a</td>
                     </tr>
                     <tr>
-                        <td><img src="http://lorempixel.com/100/100" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>soportetal.stl</td>
-                        <td>1</td>
-                        <td>Soporte lateral</td>
+                        <td><img src="img/elec-perfboard.jpg" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>Placa perforada (<i>perfboard</i>)</td>
+                        <td>3</td>
+                        <td>Necesitas 3 servos para la mu&ntilde;eca, las pinzas y la gr&uacute;a</td>
                     </tr>
                     <tr>
-                        <td><img src="http://lorempixel.com/100/100" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>soportetal.stl</td>
-                        <td>1</td>
-                        <td>Soporte lateral</td>
-                    </tr>
-                    <tr>
-                        <td><img src="http://lorempixel.com/100/100" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>soportetal.stl</td>
-                        <td>1</td>
-                        <td>Soporte lateral</td>
+                        <td><img src="img/elec-pinchos.jpg" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>Hilera de pines macho</td>
+                        <td>3</td>
+                        <td>Necesitas 3 servos para la mu&ntilde;eca, las pinzas y la gr&uacute;a</td>
                     </tr>
                 </tbody>
             </table>
@@ -291,10 +354,9 @@
             </p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-            <img src="img/cubo-rubik.svg" class="img-responsive" alt="Responsive image">
+            <img src="img/cubo-rubik.jpg" class="img-responsive" alt="Responsive image">
             </div>
         </div>
-
 
             <!-- BEGIN footer -->
             <div id="footer">
@@ -319,6 +381,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script>
+            $(function() {
+                var pgurl = window.location.href.substr(window.location.href
+                        .lastIndexOf("/")+1);
+                $("nav div li a").each(function(){
+                    if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
+                        if($(this).parent().parent().attr('class')=="dropdown-menu") {
+                            $(this).parent().parent().parent().addClass("active");
+                            $(this).parent().addClass("active");
+                        } else {
+                            $(this).parent().addClass("active");
+                    }
+                    }
+                })
+            });
+        </script>
     </body>
 </html>
 
