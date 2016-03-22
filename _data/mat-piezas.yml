@@ -1,0 +1,49 @@
+- pieza: soporte-lateral-izq.stl y soporte-lateral-der.stl
+  imagen: img/png-piezas/soportes-laterales.png
+  descripcion:  
+                        <p>Necesitas dos piezas sim&eacute;tricas. Ojo, no son iguales porque tienen un peque&ntilde;o reborde que impide que el rodamiento se salga en caso de que haya cierta holgura.</p>
+
+- pieza: hombros.stl
+  imagen: img/png-piezas/hombros.png
+  descripcion:
+                        <p>Los hombros se colocan entre los dos soportes laterales, y sostienen el servo que mueve las pinzas. Adem&aacute;s dan soporte a los rodamientos en los que encajan los brazos</p>
+
+
+- pieza: brazo-izquierdo.stl y brazo-derecho.stl
+  imagen: img/png-piezas/brazos.png
+  descripcion:
+                            <p>Los brazos encajan en los rodamientos de los hombros. El brazo izquierdo tiene un hueco para alojar el servo que mueve la <i>mu&ntilde;eca</i>.</p>
+
+- pieza: soporte-servo-grua.stl
+  imagen: img/png-piezas/soporte-servo-grua.png
+  descripcion:
+                            <p>Esta pieza tambi&eacute;n aloja un servo, que es el que tira de la polea conectada a los hombros para permitir que los brazos suban y bajen.</p>
+
+- pieza: base-cuadrada.stl
+  imagen: img/png-piezas/base-cuadrada.png
+  descripcion:
+                        <p>1</p>
+                        <p>Aqu&iacute; se apoya el cubo. Tiene cuatro huecos para atornillarlo a la rueda dentada que engrana con el motor, y unos huecos para introducir las solapas que permiten girar una cara del cubo cuando los brazos est&aacute;n cerrados</p>
+
+- pieza: solapas-base.stl
+  imagen: img/png-piezas/solapas-base.png
+  descripcion: <p>Necesitas al menos cuatro de estas peque&ntilde;as piezas, que son las que hacen que el cubo se mueva cuando se mueve la base. Hay ocho huecos en la base cuadrada para estas piezas, aunque nosotros hemos comprobado que con cuatro es suficiente</p>
+
+- pieza: rueda-dentada-grande.stl
+  imagen: img/png-piezas/rueda-dentada-grande.png
+  descripcion:
+                        <p>Esta rueda engrana con la peque&ntilde;a que est&aacute; unida al motor. En ella encaja...xxx</p>
+
+- pieza: apoyo-grua.stl
+  imagen: img/png-piezas/apoyo-grua.png
+  descripcion:
+                        <p>1</p>
+                        <p>Esta pieza esta atornillada en el hombro y enganchada al servo trasero.</p>
+
+- pieza: soporte-motor.stl                        
+  imagen: img/png-piezas/soporte-motor.png
+  descripcion: 
+                        <p>1</p>
+                        <p>En esta pieza encaja nuestro motor y el rodamiento que aloja la rueda dentada grande</p>
+
+

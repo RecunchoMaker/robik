@@ -1,0 +1,6 @@
+- vitamina: Arduino UNO
+  imagen: img/elec-arduino.jpg
+  cantidad: 1
+  descripcion:
+                        <td>Podr&aacute;s utilizar cualquier tipo de Arduino que tenga al menos siete salidas digitales (3 de ellas pwm). </td>
+

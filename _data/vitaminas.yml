@@ -1,0 +1,18 @@
+- vitamina: Rodamientos 8x22x7
+  imagen: img/vit-rodamientos.jpg
+  cantidad: 6
+  precio: < 1 &euro;
+  comentarios: Hacen falta 6 rodamientos axiales. No es necesario que sean de muy buena calidad ya que no van a soportar grandes fuerzas. La referencia 8x22x7 se refiere a las medidas del rodamiento (di&aacute;metro del agujero, di&aacute;metro exterior y ancho).
+
+- vitamina: Tornillos y tuercas M3
+  imagen: img/vit-tornillos.jpg
+  cantidad: Varios
+  precio: < 1 &euro;
+  comentarios: Necesitas varios tornillos y tuercas M3. Puedes comprarlos en muchas ferreter&iacute;as. Nosotros los utilizamos con cabeza hexagonal (para llaves allen). Si quieres comprar una buena cantidad, para futuros proyectos, <a href="rationalstock.es">rationalstock.es</a> tiene buenos precios.
+
+- vitamina: Base de madera
+  imagen: img/vit-tabla.jpg
+  cantidad: 1
+  precio: < 1 &euro;
+  comentarios: Utiliza cualquier trozo de madera (melamina, dmf...) para atornillar la estructura. La medida m&iacute;nima es xxx aunque es preferible usar una algo m&aacute;s grande para dejar hueco para el arduino y futuras ampliaciones (una botonera, un display, un soporte para c&aacute;mara web...)
+

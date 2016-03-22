@@ -1,11 +1,10 @@
 ---
 layout: default
 ---
+<h2>Construcci&oacute;n · Parte mec&aacute;nica</h2>
 
-<h2>Construcci&oacute;n · Parte electr&oacute;nica</h2>
 
-
-{% for fila in site.data.electronica %}
+{% for fila in site.data.mecanica %}
 <div class="row">
     {% if fila.larga %}
     <div class="col-sm-6">
@@ -25,3 +24,4 @@ layout: default
     </div>
 </div>
 {% endfor %}
+

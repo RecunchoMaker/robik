@@ -1,0 +1,122 @@
+- titulo: El circuito
+  foto: img/elec-020-circuito.png
+  larga: si
+  texto: |
+    Este es un esquema de las conexiones de nuestro circuito. Simplemente tendremos que conectar los servos a 5v, el cable de se&ntilde;al de cada uno de ellos a un pin <i>pwm</i> del arduino (en este caso hemos elegido el 4,5 y 7), 12v en la entrada correspondiente del driver y conectar todas las tierras (los servos, el driver, y el arduino). Las entradas IN1, IN2, IN3 e IN4 del driver las conectamos a los pines 8, 9, 10 y 11 del arduino.
+
+- titulo: Un poco de Arduino y alimentaci&oacute;n
+  foto: img/elec-010-fuente.jpg
+  texto: <p>
+                        La dificultad principal de esta parte es, precisamente, decidir c&oacute;mo vamos a alimentar nuestro circuito, teniendo en cuenta que se necesitan 12v para el motor y 5v para los servos y el arduino.
+                    </p>
+                    <p>
+                        En principio, este robot estar&aacute; siempre conectado a un ordenador a trav&eacute;s del puerto USB, que puede proporcionar hasta 500mA de corriente. Dado que un servo puede necesitar del orden de 120mA, con tres servos mas el propio consumo del arduino estamos en el l&iacute;mite de la especificaci&oacute;n USB, as&iacute; que hemos decidido proporcionar los 5v a los servos con una fuente de alimentaci&oacute;n externa.
+                    </p>
+                    <p>
+                        Tambi&eacute;n necesitamos 12v para alimentar el motor. Como necesitamos dos voltajes, una opci&oacute;n muy c&oacute;moda es utilizar una fuente ATX de cualquier ordenador viejo. Hay muchos tutoriales en internet de c&oacute;mo utilizar las fuentes ATX como fuentes de laboratorio. Y si no quieres estropear tu fuente, siempre puedes utilizar placas como la ATX Board de staticboards.com que se enchufa directamente al conector de la fuente y ofrece conectores con los distintos voltajes.
+                    </p>
+
+- titulo: Preparando un <i>escudo</i>
+  foto: img/elec-030-materiales.jpg
+  texto: <p>
+                        Para facilitar las conexiones y minimizar un poco el <i>efecto spaghetti</i> vamos a construir un escudo muy sencillo, que podremos pinchar en nuestro arduino, y que dispondr&aacute; de los conectores para enchufar directamente los servos y el motor.
+                    </p>
+                    <p>
+                        Utilizamos una peque&ntilde;a placa perfboard, una tira de pines macho y las herramientas habituales (soldador, tijeras, alicates, un poco de esta&ntilde;o, cable). Tambi&eacute;n es muy comveniente disponer de un pol&iacute;metro para comprobar que las conexi&oacute;nes est&aacute;n perfectamente soldadas y no hay cortocircuitos.
+                    </p>
+- titulo: Preparando los pines
+  foto: img/elec-040-pines.jpg
+  texto: 
+                    <p>
+                        Utilizamos unos alicates para cortar la tira de pines en trocitos. Necesitaremos una tira de 6 pines, 2 de 4, 3 de 3, 1 de 2 y 1 de uno.
+                    </p>
+
+- titulo: Alineando la primera hilera
+  foto: img/elec-050-alinear3.jpg
+  texto: <p>
+                        Lo primero que vamos a alinear es la fila de pines que ir&aacute;n conectadas a la se&ntilde;al de los servos y a los motores. F&iacute;jate que en los conectores del arduino UNO no se pueden hacer coincidir exactamente con los agujeros de la perfboard. Esto lo arreglaremos al final <i>doblando</i> un poco los pines de nuestro escudo.
+                    </p>
+                    <p>
+                        De lo que se trata aqu&iacute; es de ver en qu&eacute; sitio vamos a empezar a soldar, dejando un agujero en la perfboard entre la hilera de 4 y la de 6 pines.
+                    </p>
+
+- titulo: Empezando a soldar
+  foto: img/elec-060-empezando-soldar.jpg
+  texto: <p>
+    Comenzamos a soldar los pines a la perfboard. Suelda primero los pines de los extremos, aseg&uacute;rate que est&aacute;n perfectamente alineados y luego suelda el resto.
+    </p>
+    <p>
+    Los pines no est&aacute;n puestos al rev&eacute;s en la foto; lo que hacemos es soldar <strong>la parte larga</strong> del pin a la placa, y al final del trabajo (una vez soldados todos los cables) empujaremos la parte de pl&aacute;stico negro hacia abajo para que la parte que asome haga contacto perfectamente con los conectores del arduino.
+    </p>
+
+- titulo: Uniendo los pines de los motores
+  foto: img/elec-070-motor2.jpg
+  texto: <p>
+                        La hilera de 4 pines es la que finalmente se conectar&aacute; con las entrdas IN1, IN2, IN3 e IN4 del driver. Ponemos otra hilera de 4 pines en el lado contrario de la placa y conectamos uno a uno ambas hileras.
+                    </p>
+                    <p>
+                        Es conveniente ayudarse de un trozo de cable para hacer el puente entre los dos pines.
+                    </p>
+
+- titulo: Pines para los servos
+  foto: img/elec-080-pines-servo-front.jpg
+  texto: <p>
+                        Continuamos colocando tres hileras de 3 pines en donde ir&aacute;n conectados los servos. F&iacute;jate en la foto que aparecen dos hileras juntas y otra separada, para que est&eacute;n alineadas correctamente con los pines pwm del arduino (4, 5 y 7 en este caso)
+                    </p>
+
+- titulo: M&aacute;s conexiones para los servos
+  foto: img/elec-090-tierras.jpg
+  texto: <p>
+                        Unimos los pines que ir&aacute;n pinchados en el arduino (la hilera de 6) al pin m&aacute;s cercano de cada hilera de 3 que colocamos en la parte contraria. Este ser&aacute; el pin de se&ntilde;al.
+                    </p>
+                    <p>
+                        Adem&aacute;s, soldamos conjuntamente todos los pines centrales de cada hilera de 3, que se corresponden con los 5v, y los pines restantes de la misma hilera, que se corresponde con la tierra. Como hizimos anteriormente, utilizamos un trozo cable que nos facilite la soldadura.
+                    </p>
+
+- titulo: Colocando el pin de tierra y el conector de 12v
+  foto: img/elec-100-pintierra.jpg
+  texto: <p>
+                        Para conectar la tierra de nuestra fuente (que ir&aacute; conecctada a la perfboard) necesitamos sacar un pin que se conectar&aacute; a la tierra del Arduino. Para colocar correctamente este pin, lo enchufamos a la una entrada GND del arduino, presentamos la placa y anotamos la fila en la que tendr&aacute; que ir soldado nuestro pin.
+                    </p>
+                    <p>
+                        Tambi&eacute;n colocamos la hilera de dos pines al lado de los conectores de los servos. Este conector nos proporcionar&aacute; los 12v que llevaremos al driver del motor.
+                    </p>
+
+- titulo: Conectando el pin de 12v
+  foto: img/elec-110-cable-12v.jpg
+  texto: <p>
+                        Ya s&oacute;lo nos falta soldar tres cables a nuestra placa (tierra, 5v y 12v) que ser&aacute;n los que conectemos a nuestra fuente de alimentaci&oacute;n
+                    </p>
+                    <p>
+                        Pelamos un trozo de cable, lo pasamos por uno de los agujeros del borde de la placa y lo soldamos. Desde esa misma soldadura sacamos un cable que uniremos a uno de los pines de la hilera de 2 (esta ser&aacute; la toma de 12v para el driver) 
+
+                    </p>
+
+- titulo: Conectado los pines de 5v de los servos
+  foto: img/elec-120-cable5v.jpg
+  texto: <p>
+                        De la misma manera, colocamos otro cable desde la parte de atr&aacute;s de la placa (la parte que <strong>no</strong> tiene cobre), lo soldamos y unimos esta soldadura a la hilera del medio de los conectores de 3 pines (de los servos). Este ser&aacute; el cable que alimentar&aacute; los servos.
+                    </p>
+
+- titulo: Conectando la tierra
+  foto: img/elec-135-cabletierra.jpg
+  texto: <p>
+                          &oacute;lo falta conectar un nuevo cable al pin "suelto" (que es el que pincha en la tierra del arduino). Adem&aacute;s conectaremos esta tierra al pin que queda de nuestro conector de 12v y a la hilera de los servos que tambi&eacute;n falta. F&iacute;jate en la foto que colocamos el cable en el medio de la hilera de tierras de los servos y la tierra del conector de 12v. As&iacute; uniremos f&aacute;cilmente las estas dos tierras.
+                    </p>
+
+- titulo: Doblar los pines
+  foto: img/elec-137-doblarpines.jpg
+  texto: <p>
+                        Para que el escudo encaje en el arduino, debemos acercar suavemente los pines de la hilera de 6 y 4. Utiliza las u&ntilde;as, de 2 en dos, y d&oacute;blalos un pel&iacute;n hasta que compruebes que entran perfectamente
+                    </p>
+
+- titulo: Y ya est&aacute;
+  foto: img/elec-140-comprobarconexiones.jpg
+  texto: <p>
+                        Ya tenemos la parte electr&oacute;nica montada. Comprueba con un pol&iacute;metro que <strong>todas</strong> las conexiones est&aacute;n bien hechas. Utiliza el esquema del principio de la p&aacute;gina para guiarte. Sobre todo, aseg&uacute;rate que no hay ning&uacute;n cortocircuito entre las conexiones de tierra, 5v y 12v.
+                    </p>
+                    <p>
+                        Ya s&oacute;lo falta instalar el <a href="firmware.html">firmware</a>
+                    </p>
+
+

@@ -1,141 +1,15 @@
-<!DOCTYPE html>
-<!-- BEGIN inicio -->
-<html lang="en">
-    <head>
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Robik - Un robot imprimible que puede mover el cubo de Rubik</title>
-
-        <!-- Bootstrap -->
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-        <link href="css/custom.css" rel="stylesheet">
+---
+layout: default
+---
+<h2>
+Lista de materiales
+</h2>
+<h3>Piezas impresas</h3>
+<p>
+    Esta es la descripci&oacute;n de las piezas impresas que aparecen en el repositorio de github. Las piezas est&aacute;n disponibles en formato Freecad (fcstd) para que se puedan editar f&aacute;cilmente, y tambi&eacute;n en formato stl para que se puedan imprimir directamente pasando por el programa fileteador que prefieras. Nosotros las imprimimos con un relleno del 30% y es suficiente.
+</p>
 
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="http//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>script>
-            <script src="http//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>script>
-        <![endif]-->
-    </head>
-    <body>
-
-        <!-- Modal pagina en construccion -->
-        <div id="enconstruccion" class="modal" tabindex="-1" role="dialog">
-          <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content panel-danger">
-              <div id="kaka" class="modal-header panel-heading">
-                <button type="button" onclick="$('div#enconstruccion').removeClass('show')" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">P&aacute;gina en construcci&oacute;n!</h4>
-              </div>
-              <div class="modal-body">
-                  <p>El material que aparece en esta p&aacute;gina est&aacute; incompleto y sujeto a muchos cambios.</p>
-                  <p>Estamos trabajando para tener lista la documentaci&oacute;n de Robik el d&iacute;a en Abril de 2016.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" onclick="$('div#enconstruccion').removeClass('show')" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-
-          </div>
-        </div>        
-
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Robik</a>
-                </div>
-        
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="materiales.html">Materiales</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Construcci&oacute;n<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="construccion.html">Mec&aacute;nica</a></li>
-                            <li><a href="electronica.html">Electr&oacute;nica</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="firmware.html">Firmware</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enlaces <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://facebook.com/recunchomaker">Facebook</a></li>
-                            <li><a href="https://twitter.com/RecunchoMaker">Twitter</a>
-                            <li><a href="https://flickr.com/recunchomaker">Flickr</a>
-                        </ul>
-                    </li>
-                </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-            
-<!-- END inicio -->
-
-        <div class="container">
-
-<div class="container">
-    <span class="visible-lg">lg - Large (1170px / 95px columna)</span>
-    <span class="visible-md">md - Medium (970px / 75x columna)</span>
-    <span class="visible-sm">sm - Small (750px / 60px columna)</span>
-    <span class="visible-xs">xs - Extra-small (< 768 pixeles . Ancho automatico)</span>
-    <span class="visible-print">Print</span>
-</div>
-
-            <h2>Piezas impresas</h2>
-            <p>Las piezas pueden imprimirse tanto en PLA como en ABS. Con un 20% de relleno es suficiente.</p>            
-<!--
-            <div class="col-sm-4">
-                <div class="col-sm-6">
-                        <img src="img/png-piezas/apoyo-grua.png" class="img-thumbnail" alt="Responsive image">
-                </div>
-                <div class="col-sm-6">
-                    <div class="col-sm-12">
-                        pieza-tal.stl
-                    <div>
-                    <div class="col-sm-12">
-                        En la base cuadrada hay ocho huecos para encajar estas piezas, aunque a nosotros nos funciona bien simplemente con cuatro, coloc&aacute;ndolas en dos esquinas enfrentadas.
-                    </div>
-                    <div class="col-sm-12">
-                        Cantidad: 1
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="col-sm-6">
-                        <img src="img/png-piezas/apoyo-grua.png" class="img-thumbnail" alt="Responsive image">
-                </div>
-                <div class="col-sm-6">
-                    <div class="col-sm-12">
-                        pieza-tal.stl
-                    <div>
-                    <div class="col-sm-12">
-                        En la base cuadrada hay ocho huecos para encajar estas piezas, aunque a nosotros nos funciona bien simplemente con cuatro, coloc&aacute;ndolas en dos esquinas enfrentadas.
-                    </div>
-                    <div class="col-sm-12">
-                        Cantidad: 1
-                    </div>
-                </div>
-            </div>
-            -->             
             <table class="table">
                 <thead>
                     <tr>
@@ -146,110 +20,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for pieza in site.data.mat-piezas %}
                     <tr>
-                        <td><img src="img/png-piezas/soportes-laterales.png" class="img-thumbnail" alt="Responsive image"></td>
+                        <td><img src="{{ pieza.imagen }}" class="img-thumbnail" alt="Responsive image"></td>
                         <td>
-                            <h4>soportes-laterales.stl</h4>
-                        <p>Necesitas dos piezas sim&eacute;tricas. Ojo, no son iguales porque tienen un peque&ntilde;o reborde que impide que el rodamiento se salga en caso de que haya cierta holgura.</p>
+                            <h4>{{ pieza.pieza }}</h4>
+                            {{ pieza.descripcion }}
                         </td>
                     </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/hombros.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            <h4>hombros.stl</h4>
-                        <p>Los hombros se colocan entre los dos soportes laterales, y sostienen el servo que mueve las pinzas. Adem&aacute;s dan soporte a los rodamientos en los que encajan los brazos</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/soportes-laterales.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            <h4>brazos-xxx.stl</h4>
-                            <p>Los brazos encajan en los rodamientos de los hombros. El brazo izquierdo tiene un hueco para alojar el servo que mueve la <i>mu&ntilde;eca</i>.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/soportes-laterales.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            <h4>soporte-grua-xxx.stl</h4>
-                            <p>Esta pieza tambi&eacute;n aloja un servo, que es el que tira de la polea conectada a los hombros para permitir que los brazos suban y bajen.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/apoyo-grua.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            apoyo-grua.stl
-                        <p>1</p>
-                        <p>Esta pieza esta atornillada en el hombro y enganchada al servo trasero.</p>
-                    </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/base-cuadrada.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            base-cuadrada.stl
-                        <p>1</p>
-                        <p>Aqu&iacute; se apoya el cubo. Tiene cuatro huecos para atornillarlo a la rueda dentada que engrana con el motor, y unos huecos para introducir las solapas que permiten girar una cara del cubo cuando los brazos est&aacute;n cerrados</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/solapas-base.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            solapas-base.stl
-                        <p>4</p>
-                        <p>Hay ocho huecos en la base cuadrada para estas piezas, aunque nosotros hemos comprobado que con cuatro es suficiente</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/solapas-base.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            rueda-dentada-grande-xxxxx
-                        <p>4</p>
-                        <p>Hay ocho huecos en la base cuadrada para estas piezas, aunque nosotros hemos comprobado que con cuatro es suficiente</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/soporte-motor.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            soporte-motor.stl
-                        <p>1</p>
-                        <p>En esta pieza encaja nuestro motor y el rodamiento que aloja la rueda dentada grande</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/soporte-motor.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            capuchon-xxxxx.stl
-                        <p>1</p>
-                        <p>En esta pieza encaja nuestro motor y el rodamiento que aloja la rueda dentada grande</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/enganche-servo-pinza.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            enganche-servo-pinza.stl
-                        <p>1</p>
-                        <p>Pieza que facilita la uni&oacute;n del servo de la pinza con los brazos. Est&aacute; pegada a la aspa del servo</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/enganche-servo-pinza.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            plaquitas-xxxxx
-                        <p>1</p>
-                        <p>Pieza que facilita la uni&oacute;n del servo de la pinza con los brazos. Est&aacute; pegada a la aspa del servo</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/png-piezas/rueda-dentada-pequena.png" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>
-                            rueda-dentada-pequena.stl
-                        <p>1</p>
-                        <p>Esta pieza encaja en el eje del motor, y engrana con la rueda dentada grande que mueve la base</p>
-                        </td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
 
-            <h2>Vitaminas</h2>
+<h3>Vitaminas</h3>
             <p>Como tambi&eacute;n se dice en el mundo de las impresoras auto-replicantes (repraps), llamamos vitaminas a todas aquellas partes que <strong>NO SE PUEDEN IMPRIMIR</strong> y que hay que comprar</p>            
             <table class="table">
                 <thead>
@@ -263,32 +46,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for vitamina in site.data.vitaminas %}
                     <tr>
-                        <td><img src="img/vit-rodamientos.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Rodamientos 8x22x7</td>
-                        <td>6</td>
-                        <td>< 1 &euro;</td>
-                        <td>Hacen falta 6 rodamientos axiales. No es necesario que sean de muy buena calidad ya que no van a soportar grandes fuerzas. La referencia 8x22x7 se refiere a las medidas del rodamiento (di&aacute;metro del agujero, di&aacute;metro exterior y ancho).</td>
+                        <td><img src="{{ vitamina.imagen }}" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>{{ vitamina.vitamina }}</td>
+                        <td>{{ vitamina.cantidad }}6</td>
+                        <td>{{ vitamina.precio }}</td>
+                        <td>{{ vitamina.comentarios }}</td>
                     </tr>
-                    <tr>
-                        <td><img src="img/vit-tornillos.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Tornillos y tuercas M3</td>
-                        <td>Varios</td>
-                        <td>< 1 &euro;</td>
-                        <td>Necesitas varios tornillos y tuercas M3. Puedes comprarlos en muchas ferreter&iacute;as. Nosotros los utilizamos con cabeza hexagonal (para llaves allen). Si quieres comprar una buena cantidad, para futuros proyectos, <a href="rationalstock.es">rationalstock.es</a> tiene buenos precios.</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/vit-tabla.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Base de madera</td>
-                        <td>1</td>
-                        <td>< 1 &euro;</td>
-                        <td>Utiliza cualquier trozo de madera (melamina, dmf...) para atornillar la estructura. La medida m&iacute;nima es xxx aunque es preferible usar una algo m&aacute;s grande para dejar hueco para el arduino y futuras ampliaciones (una botonera, un display, un soporte para c&aacute;mara web...)</td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
 
 
-            <h2>Electr&oacute;nica</h2>
+            <h4>Electr&oacute;nica</h4>
             <p>Adem&aacute;s de esta lista de componentes necesitaras el t&iacute;pico material necesario para proyectos de este tipo (algo de cable, un soldador, esta&ntilde;o)...</p>            
             <table class="table">
                 <thead>
@@ -300,47 +71,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for elec in site.data.vita-electronica %}
                     <tr>
-                        <td><img src="img/elec-arduino.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Arduino UNO</td>
-                        <td>1</td>
-                        <td>Podr&aacute;s utilizar cualquier tipo de Arduino que tenga al menos siete salidas digitales (3 de ellas pwm). </td>
+                        <td><img src="{{ elec.imagen }}" class="img-thumbnail" alt="Responsive image"></td>
+                        <td>{{ elec.nombre }}</td>
+                        <td>{{ elec.cantidad }}</td>
+                        <td>{{ elec.descripcion }}</td>
                     </tr>
-                    <tr>
-                        <td><img src="img/elec-motor.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Motor paso a paso xxx</td>
-                        <td>1</td>
-                        <td>Este es un motor paso a paso <i>bipolar</i> que tiene la ventaja de que tiene muy poca altura. La referencia es pm35s-048-hpl2</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/elec-driver.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Driver de motor basada en ULN2003</td>
-                        <td>1</td>
-                        <td>Esta placa sirve de interface entre el arduino y el motor.</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/elec-servo.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Servos 9g</td>
-                        <td>3</td>
-                        <td>Necesitas 3 servos para la mu&ntilde;eca, las pinzas y la gr&uacute;a</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/elec-perfboard.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Placa perforada (<i>perfboard</i>)</td>
-                        <td>3</td>
-                        <td>Necesitas 3 servos para la mu&ntilde;eca, las pinzas y la gr&uacute;a</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/elec-pinchos.jpg" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>Hilera de pines macho</td>
-                        <td>3</td>
-                        <td>Necesitas 3 servos para la mu&ntilde;eca, las pinzas y la gr&uacute;a</td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
 
 
-            <h2>... y no te olvides del cubo de Rubik!</h2>
+<h3>... y no te olvides del cubo de Rubik!</h3>
             <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
             <p>
@@ -358,46 +101,3 @@
             </div>
         </div>
 
-            <!-- BEGIN footer -->
-            <div id="footer">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                        <p>2016 · <a href="recunchomaker.org">recunchomaker.com</a> · Santiago de Compostela · Galicia · Espa&ntilde;a</p>
-<a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">Licencia Creative Commons Attribution-ShareAlike 4.0</a>
-
-</p>
-
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
-                <a href="https://facebook.com/recunchomaker"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                <a href="https://twitter.com/RecunchoMaker"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                <a href="https://flickr.com/recunchomaker"><i id="social-fl" class="fa fa-flickr fa-3x social"></i></a>
-                    </div>
-                </div>
-            </div>
-                                  
-        </div>
-            
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script>
-            $(function() {
-                var pgurl = window.location.href.substr(window.location.href
-                        .lastIndexOf("/")+1);
-                $("nav div li a").each(function(){
-                    if($(this).attr("href") == pgurl || $(this).attr("href") == '' ) {
-                        if($(this).parent().parent().attr('class')=="dropdown-menu") {
-                            $(this).parent().parent().parent().addClass("active");
-                            $(this).parent().addClass("active");
-                        } else {
-                            $(this).parent().addClass("active");
-                    }
-                    }
-                })
-            });
-        </script>
-    </body>
-</html>
-
-            <!-- END footer -->

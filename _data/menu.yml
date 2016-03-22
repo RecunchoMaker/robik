@@ -1,0 +1,27 @@
+- titulo: Inicio
+  url: index.html
+
+- titulo: Materiales
+  url: materiales.html
+
+- titulo: Construcci&oacute;n
+  url: construccion.html
+  submenu:
+    - titulo: Mec&aacute;nica
+      url: mecanica.html
+    - titulo: Electr&oacute;nica
+      url : electronica.html
+
+- titulo: Firmware
+  url: firmware.html
+
+- titulo: FAQ
+  url: faq.html
+
+- titulo: Enlaces
+  url: enlaces.html
+  submenu:
+    - titulo: Facebook
+      url: facebook.com/recunchomaker
+    - titulo: Twitter
+      url: facebook.com/recunchomaker

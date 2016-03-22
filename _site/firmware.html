@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+      <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Robik - Un robot imprimible que puede mover el cubo de Rubik</title>
+  <title>Your awesome title</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!--
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/firmware.html">
+  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
+
+-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <link href="css/custom.css" rel="stylesheet">
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="http//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>script>
+            <script src="http//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>script>
+        <![endif]-->
+    </head>
+
+
+  <body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Robik</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li><a href="index.html">Inicio</a></li>
+            
+            
+            
+            <li><a href="materiales.html">Materiales</a></li>
+            
+            
+            
+            <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Construcci&oacute;n<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    
+                        <li><a href="mecanica.html">Mec&aacute;nica</a></li>
+                    
+                        <li><a href="electronica.html">Electr&oacute;nica</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li><a href="firmware.html">Firmware</a></li>
+            
+            
+            
+            <li><a href="faq.html">FAQ</a></li>
+            
+            
+            
+            <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enlaces<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    
+                        <li><a href="facebook.com/recunchomaker">Facebook</a></li>
+                    
+                        <li><a href="facebook.com/recunchomaker">Twitter</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+    <div class="container">
+        <h2>Instalaci&oacute;n del firmware</h2>
+
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-020-base-y-hombro.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>Preparando la instalaci&oacute;n</h4>
+        <p> Antes de instalar el firmware en el arduino, para evitar forzar alg&uacute;n servo, vamos a desconectar la cuerdecita de la gr&uacute;a y los tornillos que unen las plaquitas del servo de las pinzas a las propias pinzas. Queremos que se muevan libremente (por ahora). </p> <p> El servo de la mu&ntilde;eca y el motor paso a paso no necesitan calibrarse as&iacute; que no tenemos que preocuparnos de estos componentes. </p>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-020-base-y-hombro.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>Instalando el firmware</h4>
+        <ol> <li>Descarga la carpeta <strong>firmware</strong> de nuestro github</li> <li>Abre el archivo <strong>robik.ino</strong> desde el Arduino IDE</li> <li>Selecciona en los men&uacute;s arduino->mi arduino y el puerto correspondiente</li> <li>Pincha en verificar y tal</li> </ol>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-020-base-y-hombro.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>Conect&aacute;ndose a <strong>Robik</strong></h4>
+        <p> Una vez instalado el firmware, es el momento de conectarse a &eacute;l a trav&eacute;s del puerto USB. Puedes utilizar cualquier programa monitor serie. En este ejemplo usamos <i>picocom</i>, ejecut&aacute;ndolo desde una ventana de terminal poniendo como par&aacute;metro el puerto serie que nos proporciona Arduino (en linux, normalmente /dev/ttyUSB0) </p> <p> <code> $ picocom /dev/ttyUSB0 $ robik> </code> </p> <p> El firmware nos proporciona una serie de comandos que podemos teclear para ejecutar movimientos en el robot. El comando <strong>h</strong> (help) lista las instrucciones disponibles. </p> <p> <code> robik> h<br> tal cual porque porqueno </code> </p>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-030-servos.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>Calibraci&oacute;n de la apertura de las pinzas</h4>
+        <p> Los comandos <code>pa</code>, <code>pc</code> y <code>ps</code> dejan las pinzas en una posici&oacute;n <i>abierta</i>, <i>cerrada</i> y <i>semicerrada</i> respectivamente. <ul> <li><strong>Pinza abierta{:} </strong>esta posici&oacute;n permite al cubo girar libremente sobre su base. Interesa no abrirlas al m&aacute;ximo, sino lo justo para permitir que el cubo gire, y as&iacute; minimizar el tiempo que tarden en abrirse.</li> <li><strong>Pinza cerrada{:} </strong>el cubo debe quedar lo suficientemente agarrado como para que la gr&uacute;a lo levante sin problemas.</li> <li><strong>Pinza semicerrada{:} </strong>En esta posici&oacute;n el cubo debe estar suelto (pero con las pinzas muy cerca de &eacute;l). Esta posici&oacute;n se utiliza para preparar algunos movimientos, lo comprender&aacute;s enseguida cuando lo veas moverse.</li> </ul> </p> <p> Calibramos primeramente la longitud de las plaquitas que unen el servo de las pinzas con los brazos. Debemos tener estas piezas desatornilladas seg&uacute;n vimos en el primer paso, para que el servo que mueve las pinzas gire libremente, sin estar conectado a los brazos. </p> <p> Cerramos la pinza con el comando <code>pc</code> (pinza cerrada). Oiremos el servo moverse a una posici&oacute;n concreta. En esta posici&oacute;n, el aspa del servo debe estar m&aacute;s o menos horizontal (si no es as&iacute;, separa el aspa del servo y vu&eacute;lvela a montar). Es el momento de colocar el cubo en la base de <strong>Robik</strong>, apretar las pinzas con nuestros dedos para que quede perfectamente agarrado, fijar los brazos a las plaquitas y terminar de apretar los tornillos de las mismas. </p> <p> Una vez hecho esto, los comandos <code>pa</code>, <code>pc</code> y <code>ps</code> deber&aacute;n funcionar correctamente. Si las posiciones son <i>aproximadamente</i> correctas pero consideras que se puede afinar algo m&aacute;s, siempre puedes editar los par&aacute;metros del firmware, como se indica m&aacute;s adelante.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-040-base.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>Calibraci&oacute;n de la gr&uacute;a</h4>
+        <p> La gr&uacute;a se calibra de un modo similar. Con los comandos <code>ga</code>, <code>gb</code> y <code>gi</code> la gr&uacute;a se sit&uacute;a en una posici&oacute;n <i>arriba</i>, <i>abajo</i> y <i>semiarriba</i> (o semiabajo) respectivamente. </p> <ul> <li><strong>Gr&uacute;a arriba{:} </strong>esta posici&oacute;n se usa para que, con el cubo agarrado, la mu&ntilde;eca lo gire sobre s&iacute; mismo.</li> <li><strong>Gr&uacute;a abajo{:} </strong>en esta posici&oacute;n las pinzas deben quedar perfectamente alineadas con el centro del cubo, de manera que al cerrar las pinzas &eacute;ste quede perfectamente agarrado por el centro.</li> <li><strong>Gr&uacute;a semiarriba{:} </strong>esta posici&oacute;n se usa cuando se gira la cara inferior del cubo, para que no estorben las piezas de la mu&ntilde;eca. Del mismo modo que antes, lo entender&aacute;s perfectamente cuando lo veas moverse.</li> </ul> <p> Bajamos la gr&uacute;a con el comando <code>gb</code>. El servo debe quedar en una posici&oacute;n m&aacute;s o menos vertical hacia abajo (igual que en el caso anterior, si no es as&iacute;, separa el aspa y col&oacute;cala en posici&oacute;n vertical) </p> <p> Ahora intenta ajustar la gr&uacute;a para que las mu&ntilde;ecas queden a la altura del centro del cubo (quiz&aacute; te sea m&aacute;s f&aacute;cil de alinear si previamente lanzas el comando <code>ps</code>. En esa posici&oacute;n termina de apretar la cuerdecita a la polea e los hombros. </p>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-050-empezando-atornillar.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>Primeros experimentos</h4>
+        <p> Ya podemos empezar a experimentar moviendo el cubo con comandos, viendo c&oacute;mo se comporta y afinando los &uacute;ltimos ajustes. Los comandos son autoexplicativos, pero como gu&iacute;a, aqu&iacute; mostramos una prueba con la que empezar. </p> <ul> <li>Pasos para girar la cara de arriba</li> <ol> <li><code>pa</code> abrir pinza, por si estaba cerrada</li> <li><code>m0</code> para poner el servo de la mu&ntilde;eca en una posici&oacute;n que nos permita moverlo posteriormente 180º</li> <li><code>gb</code> para bajar la gr&uacute;a</li> <li><code>pc</code> para agarrar el cubo</li> <li><code>ga</code> para levantar el cubo</li> <li><code>m2</code> giramos la mu&ntilde;eca 180º</li> <li><code>gb</code> volvemos a apoyar el cubo</li> <li><code>ps</code> abrimos <i>un poquito</i> la pinza</li> <li><code>gs</code> subimos <i>un poquito</i> la gr&uacute;a</li> <li><code>pc</code> para agarrar el cubo (esta vez no por el centro, si no un poco m&aacute;s arriba)</li> <li><code>gb 1</code> giramos la base (y como el cubo est&aacute; agarrado se mover&aacute; la cara)</li> </ol> </ul> <p> Si detectas alg&uacute;n movimiento que no es del todo exacto, repite los ajustes de la mec&aacute;nica hasta que consigas que funcione perfectamente
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-060-brazos.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>Últimos ajustes</h4>
+        <p> Si no estas conforme con los ajustes mec&aacute;anicos, siempre puedes configurar los par&aacute;metros del firmware a tu gusto. </p> <p> Todas las posiciones predefinidas para las pinzas, la gr&uacute;a, la mu&ntilde;eca, y el n&uacute;mero de pasos del motor est&aacute;n especificados en el fichero <strong>settings.h</strong>. Experimenta con los par&aacute;metros y busca la combinaci&oacute;n que m&aacute;s te convenza </p>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-070-servo-hombros.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>El comando <strong>sec</strong></h4>
+        <p> Un comando muy &uacute;til es <code>seq <i>secuencia</i></code>, que te permite ejecutar secuencias en el formato <a href="https://es.wikipedia.org/wiki/Cubo_de_Rubik#Notaci.C3.B3n">singmaster</a>. Por ejemplo, este comando hace el movimiento conocido como <i>sexy move</i>. </p> <p> <code>seq URU'R'</code> </p> <p> Este comando tambi&eacute;n te permite depurar de forma m&aacute;s sencilla los movimientos del cubo para optimizar los movimientos, ya sea modificando los par&aacute;metros en <strong>settings.h</strong>, afinando los tiempos de espera en <strong>robot.c</strong> o modificando cualquier parte del firmware que se te ocurra. </p>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="img/cons-080-atornillando-soportes.jpg" class="img-thumbnail" alt="Responsive image">
+    </div>
+    <div class="col-sm-8">
+        <h4>Experimenta, experimenta, experimenta!</h4>
+        <p> ...y hasta aqu&iacute; hemos llegado! No dudes en experimentar con todas las partes de tu robot y comentarnos cualquier problema o mejora que se te ocurra. </p>
+        </p>
+    </div>
+</div>
+
+
+    </div>
+
+                <!-- BEGIN footer -->
+            <div id="footer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <p>2016 · <a href="recunchomaker.org">recunchomaker.com</a> · Santiago de Compostela · Galicia · Espa&ntilde;a</p>
+<a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">Licencia Creative Commons Attribution-ShareAlike 4.0</a>
+
+</p>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
+                <a href="https://facebook.com/recunchomaker"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/RecunchoMaker"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://flickr.com/recunchomaker"><i id="social-fl" class="fa fa-flickr fa-3x social"></i></a>
+                    </div>
+                </div>
+            </div>
+                                  
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script>
+            $(function() {
+                var pgurl = window.location.href.substr(window.location.href
+                        .lastIndexOf("/")+1);
+                $("nav div li a").each(function(){
+                    if($(this).attr("href") == pgurl || ( pgurl=='' && $(this).attr("href")=='index.html') ) {
+                        if($(this).parent().parent().attr('class')=="dropdown-menu") {
+                            $(this).parent().parent().parent().addClass("active");
+                            $(this).parent().addClass("active");
+                        } else {
+                            $(this).parent().addClass("active");
+                    }
+                    }
+                })
+            });
+        </script>
+
+
+  </body>
+
+</html>
