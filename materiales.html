@@ -40,8 +40,7 @@ Lista de materiales
                         <th>Imagen</th>
                         <th>Nombre</th>
                         <th>Cantidad</th>
-                        <th>Precio aprox</th>
-                        <th>Tiendas</th>
+                        <th>Precio aprox.</th>
                         <th>Comentarios</th>
                     </tr>
                 </thead>
@@ -50,7 +49,7 @@ Lista de materiales
                     <tr>
                         <td><img src="{{ vitamina.imagen }}" class="img-thumbnail" alt="Responsive image"></td>
                         <td>{{ vitamina.vitamina }}</td>
-                        <td>{{ vitamina.cantidad }}6</td>
+                        <td class="text-center">{{ vitamina.cantidad }}</td>
                         <td>{{ vitamina.precio }}</td>
                         <td>{{ vitamina.comentarios }}</td>
                     </tr>
@@ -65,7 +64,7 @@ Lista de materiales
                 <thead>
                     <tr>
                         <th>Imagen</th>
-                        <th>Pieza(STL)</th>
+                        <th>Componente</th>
                         <th>Cantidad</th>
                         <th>Comentarios</th>
                     </tr>
@@ -74,8 +73,8 @@ Lista de materiales
                     {% for elec in site.data.vita-electronica %}
                     <tr>
                         <td><img src="{{ elec.imagen }}" class="img-thumbnail" alt="Responsive image"></td>
-                        <td>{{ elec.nombre }}</td>
-                        <td>{{ elec.cantidad }}</td>
+                        <td>{{ elec.componente }}</td>
+                        <td class="text-center">{{ elec.cantidad }}</td>
                         <td>{{ elec.descripcion }}</td>
                     </tr>
                     {% endfor %}

@@ -1,6 +1,35 @@
-- vitamina: Arduino UNO
+- componente: Arduino UNO
   imagen: img/elec-arduino.jpg
   cantidad: 1
   descripcion:
-                        <td>Podr&aacute;s utilizar cualquier tipo de Arduino que tenga al menos siete salidas digitales (3 de ellas pwm). </td>
+                        Podr&aacute;s utilizar cualquier tipo de Arduino que tenga al menos siete salidas digitales (3 de ellas pwm).
+
+- componente: Servos 9g
+  imagen: img/elec-servo.jpg
+  cantidad: 3
+  descripcion: Los servos 9g son muy baratos y muy sencillos de usar para proyectos caseros de rob&oacute;tica. Se necesitan 3 para Robik.
+
+- componente: Motor paso a paso
+  imagen: img/elec-motor.jpg
+  cantidad: 1
+  descripcion: Usamos el motor con referencia PM35S-048-HPL2, que tiene la ventaja de que tiene muy poca altura.
+
+- componente: Driver motor
+  imagen: img/elec-driver.jpg
+  cantidad: 1
+  descripcion: Necesitamos un driver basado en el ULN2003.
+
+- componente: Perfboard
+  imagen: img/elec-perfboard.jpg
+  cantidad: 1
+  descripcion: No es necesario, pero para dejar los cables un poco m&aacute;s ordenados es conveniente hacer un peque&ntilde;o escudo con una perfboard y unos pocos pines
+
+- componente: Pines macho
+  imagen: img/elec-pinchos.jpg
+  cantidad: 1
+  descripcion: Pines para hacer nuestro escudo.
+
+
+
+
 
