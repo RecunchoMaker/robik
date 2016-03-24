@@ -1,5 +1,5 @@
 - titulo: Preparando la instalaci&oacute;n
-  foto: img/cons-020-base-y-hombro.jpg
+  foto: img/firm-010-preparando.jpg
   texto: 
                     <p>
                     Antes de instalar el firmware en el arduino, para evitar forzar alg&uacute;n servo, vamos a desconectar la cuerdecita de la gr&uacute;a y los tornillos que unen las plaquitas del servo de las pinzas a las propias pinzas. Queremos que se muevan libremente (por ahora).
@@ -9,57 +9,60 @@
                     </p>
 
 - titulo: Instalando el firmware
-  foto: img/cons-020-base-y-hombro.jpg
+  foto: img/firm-020-subiendo.jpg
   texto: 
                     <ol>
-                        <li>Descarga la carpeta <strong>firmware</strong> de nuestro github</li>
-                        <li>Abre el archivo <strong>robik.ino</strong> desde el Arduino IDE</li>
-                        <li>Selecciona en los men&uacute;s arduino->mi arduino y el puerto correspondiente</li>
-                        <li>Pincha en verificar y tal</li>
+                    <li>Descarga nuestro repositorio de <a href="https://github.com/RecunchoMaker/robik">github</a>. </li>
+                    <li>Abre el archivo <strong>Robik-firmware.ino</strong> de la carpeta <b>firmware</b> desde el Arduino IDE.</li>
+                    <li>Conecta el Arduino al ordenador por el puerto USB.</li>
+                    <li>Aseg&uacute;rate de seleccionar la placa y el puerto correspondiente.</li>
+                    <li>Pincha en <i>Subir</i></li>
                     </ol>
 
 - titulo: Conect&aacute;ndose a <strong>Robik</strong>
-  foto: img/cons-020-base-y-hombro.jpg
+  foto: img/firm-030-conexion.jpg
   texto: 
                     <p>
                         Una vez instalado el firmware, es el momento de conectarse a &eacute;l a trav&eacute;s del puerto USB. Puedes utilizar cualquier programa monitor serie. En este ejemplo usamos <i>picocom</i>, ejecut&aacute;ndolo desde una ventana de terminal poniendo como par&aacute;metro el puerto serie que nos proporciona Arduino (en linux, normalmente /dev/ttyUSB0)
                     </p>
-                    <p>
-                        <code>
-    $ picocom /dev/ttyUSB0
-    $ robik>
-                        </code>
-                    </p>
+                    <div>
+                    <pre class="terminal">
+                    <code>$ picocom /dev/ttyUSB0<br>
+                    robik$ _
+                    </code>
+                    </pre>
+                    </div>
                     <p>
                         El firmware nos proporciona una serie de comandos que podemos teclear para ejecutar movimientos en el robot. El comando <strong>h</strong> (help) lista las instrucciones disponibles.
                     </p>
-                    <p>
-                        <code>
-                            robik> h<br>
-    tal
-    cual
-    porque
-    porqueno
-                        </code>
-                    </p>
-
+                    <div>
+                    <pre class="terminal">
+                    <code>robik$ h<br>
+                    pa - pinzaAbierta<br>
+                    pc - pinzaCerrada<br>
+                    pc - pinzaSemiabierta<br>
+                    ...<br>
+                    robik$ _
+                    </code>
+                    </pre>
+                    </div>
 
 - titulo: Calibraci&oacute;n de la apertura de las pinzas
   foto: img/cons-030-servos.jpg
   texto: 
                     <p>
-                    Los comandos <code>pa</code>, <code>pc</code> y <code>ps</code> dejan las pinzas en una posici&oacute;n <i>abierta</i>, <i>cerrada</i> y <i>semicerrada</i> respectivamente.
+                    Los comandos <code class="terminal">pa</code>, <code class="terminal">pc</code> y <code class="terminal">ps</code> dejan las pinzas en una posici&oacute;n <i>abierta</i>, <i>cerrada</i> y <i>semicerrada</i> respectivamente.
                     <ul>
-                    <li><strong>Pinza abierta{:} </strong>esta posici&oacute;n permite al cubo girar libremente sobre su base. Interesa no abrirlas al m&aacute;ximo, sino lo justo para permitir que el cubo gire, y as&iacute; minimizar el tiempo que tarden en abrirse.</li>
-                        <li><strong>Pinza cerrada{:} </strong>el cubo debe quedar lo suficientemente agarrado como para que la gr&uacute;a lo levante sin problemas.</li>
-                        <li><strong>Pinza semicerrada{:} </strong>En esta posici&oacute;n el cubo debe estar suelto (pero con las pinzas muy cerca de &eacute;l). Esta posici&oacute;n se utiliza para preparar algunos movimientos, lo comprender&aacute;s enseguida cuando lo veas moverse.</li>
+                    <li><strong>Pinza abierta&#58; </strong>esta posici&oacute;n permite al cubo girar libremente sobre su base. Interesa no abrirlas al m&aacute;ximo, sino lo justo para permitir que el cubo gire, y as&iacute; minimizar el tiempo que tarden en abrirse.</li>
+                        <li><strong>Pinza cerrada&#58; </strong>el cubo debe quedar lo suficientemente agarrado como para que la gr&uacute;a lo levante sin problemas.</li>
+                        <li><strong>Pinza semicerrada&#58; </strong>En esta posici&oacute;n el cubo debe estar suelto (pero con las pinzas muy cerca de &eacute;l). Esta posici&oacute;n se utiliza para preparar algunos movimientos, lo comprender&aacute;s enseguida cuando lo veas moverse.</li>
                     </ul>
                     </p>
                     <p>
                         Calibramos primeramente la longitud de las plaquitas que unen el servo de las pinzas con los brazos. Debemos tener estas piezas desatornilladas seg&uacute;n vimos en el primer paso, para que el servo que mueve las pinzas gire libremente, sin estar conectado a los brazos.
                     </p>
                     <p>
-                        Cerramos la pinza con el comando <code>pc</code> (pinza cerrada). Oiremos el servo moverse a una posici&oacute;n concreta. En esta posici&oacute;n, el aspa del servo debe estar m&aacute;s o menos horizontal (si no es as&iacute;, separa el aspa del servo y vu&eacute;lvela a montar). Es el momento de colocar el cubo en la base de <strong>Robik</strong>, apretar las pinzas con nuestros dedos para que quede perfectamente agarrado, fijar los brazos a las plaquitas y terminar de apretar los tornillos de las mismas.
+                        Cerramos la pinza con el comando <code class="terminal">pc</code> (pinza cerrada). Oiremos el servo moverse a una posici&oacute;n concreta. En esta posici&oacute;n, el aspa del servo debe estar m&aacute;s o menos horizontal (si no es as&iacute;, separa el aspa del servo y vu&eacute;lvela a montar). Es el momento de colocar el cubo en la base de <strong>Robik</strong>, apretar las pinzas con nuestros dedos para que quede perfectamente agarrado, fijar los brazos a las plaquitas y terminar de apretar los tornillos de las mismas.
                     </p>
                     <p>
                     Una vez hecho esto, los comandos <code>pa</code>, <code>pc</code> y <code>ps</code> deber&aacute;n funcionar correctamente. Si las posiciones son <i>aproximadamente</i> correctas pero consideras que se puede afinar algo m&aacute;s, siempre puedes editar los par&aacute;metros del firmware, como se indica m&aacute;s adelante.

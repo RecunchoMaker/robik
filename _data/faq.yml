@@ -7,13 +7,11 @@
 - pregunta: ¿Cuanto me costar&iacute;a un kit listo para montar, o incluso el robot completamente terminado?
   respuesta: Este es un proyecto DIY no est&aacute; planteado ning&uacute;n tipo de distribuci&oacute;n ni venta de kits. 
 
-- pregunta: ¿Qu&eacute; programas hab&eacute;is usado para dise&ntilde;arlo, imprimirlo, programarlo...?
-  respuesta: 
-                        Las piezas est&aacute;n dise&ñacute;adas en Freecad, fileteadas con Slic3r e impresas desde Pronterface. El firmware est&aacute; programado en C++ (editado con vim, aunque la mejor opci&oacute;n para empezar es el Arduino IDE)
-                        Sin las piezas impresas en 3D es dif&iacute;cil construir el robot, pero no imposible. Tendr&aacute;s que editar los ficheros STL, tomar las medidas, y fabricar las piezas en alg&uacute;n material duro (madera, metal...)
+- pregunta: ¿Qu&eacute; software hab&eacute;is usado para dise&ntilde;arlo, imprimirlo, programarlo...?
+  respuesta: Las piezas est&aacute;n dise&ntilde;adas en <a href="http&#58;//www.freecadweb.org">Freecad</a>, fileteadas con <a href="http&#58;//slic3r.org">Slic3r</a> e impresas desde <a href="http&#58;//www.pronterface.com">Pronterface</a>. El firmware est&aacute; programado en <a href="http&#58;//es.wikipedia.org/wiki/C%2B%2B">C++</a> (editado con <a href="http&#58;//www.vim.org">vim</a>, aunque la mejor opci&oacute;n para empezar es el <a href="http&#58;//www.arduino.cc/en/Main/Software">Arduino IDE</a>). Adem&aacute;s esta p&aacute;gina est&aacute; generada con <a href="http&#58;//jekyllrb.com/">jekyll</a> utilizando mayormente los estilos proporcionados por <a href="http&#58;//getbootstrap.com">Bootstrap</a>.
 
-- pregunta: Hay varios defectos en el firmware. No se est&aacute; utilizando la manera correcta para hacer <i>esto</i> o <i>aquello</i>.
-  respuesta: No somos ningunos expertos en la programaci&oacute;n de micros. Lo hemos hecho lo mejor que hemos podido pero indudablemente habr&aacute; mejores maneras de hacer las cosas. No dudes en proponer cambios en Github. Estaremos encantados de recibirlos y seguir aprendiendo!
+- pregunta: Hay varios defectos en el firmware. ¿Por qu&eacute; no se ha usado <i>esto</i> o <i>aquello</i>?
+  respuesta: No somos ningunos expertos en la programaci&oacute;n de micros (ni en el dise&ntilde;o 3d!). Lo hemos hecho lo mejor que hemos podido pero indudablemente habr&aacute; mejores maneras de hacer las cosas. No dudes en proponer cambios en Github. Estaremos encantados de recibirlos y seguir aprendiendo!
 
 - pregunta: ¿Cuanto puede costar construir el robot?
   respuesta: Los componentes electr&oacute;nicos los puedes conseguir por unos 15 &euro;. Las vitaminas (tornillos, tuercas, rodamientos...) por unos 5 &euro;, y gastar&aacute;s unos 200 gr. de pl&aacute;stico para las piezas impresas (3-4 &euro;).
