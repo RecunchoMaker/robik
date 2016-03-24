@@ -22,7 +22,6 @@ See LICENSE.txt for details
 
 
 #include <Servo.h>
-//#include "Shell.h"
 #include "Robot.h"
 #include "CuboControl.h"
 
@@ -53,16 +52,10 @@ char junk;  // mierda que puede entrar por el serie
 int i,j,k;
 
 CuboControl cc(myRobot);
-//Shell myShell(1);
 
 void setup()
 {
 
-/*
-        void preparaY();
-                void preparaX(int giros);
-                        void preparaGiro();
-*/
   cmdInit(9600);
   myRobot.init();
 
@@ -91,12 +84,6 @@ void setup()
   cmdAdd(const_cast<char *>("gb"), local_giraBase, const_cast<char *>("local_giraBase"));
   cmdAdd(const_cast<char *>("init"), local_cubo_init);
 
-/*
-  cmdAdd("pY", local_preparaY, "prepara Y");
-  cmdAdd("pX", local_preparaX, "prepara X (num giros de -1 a 2");
-  cmdAdd("pG", local_preparaGiro, "prepara Giro");
-  cmdAdd("tX", local_traslacionX, "traslacion X (num giros de -1 a 2");
-  */
   cmdAdd(const_cast<char *>("tX"), local_traslacionX, const_cast<char *>("traslacion X (num giros de -1 a 2"));
 
   cmdAdd(const_cast<char *>("demo"), local_demo);
@@ -277,97 +264,9 @@ void local_base(int arg_cnt, char **args) {
 void local_apagarMotores(int arg_cnt, char **args)                                             
 {                                                                                
   myRobot.apagarMotor(myRobot.base);
-  // myRobot.apagarMotor(myRobot.grua);
 } 
 
 void loop() 
 { 
  cmdPoll();  
-  /*
-  myShell.showPrompt();
-  myShell.getSerialStr();
-  Serial.write("\n-> ");
-  Serial.write(myShell.getLastCommand());
-  Serial.write("\n");
-
-  if (strcmp(myShell.getToken(0),"m")==0) {          // muneca
-    myRobot.setMuneca(myShell.getIntToken(1));
-  } else if (strcmp(myShell.getToken(0),"seq1")==0) {   // traslacion
-  } else if (strcmp(myShell.getToken(0),"g1")==0) {  // grua arriba
-    myRobot.grua.speed=myShell.getIntToken(1);
-    myRobot.setGrua(GRUA_VALOR_ARRIBA);
-  } else if (strcmp(myShell.getToken(0),"g2")==0) {  // grua mitad
-    myRobot.grua.speed=myShell.getIntToken(1);
-    myRobot.setGrua(GRUA_VALOR_MITAD);
-  } else if (strcmp(myShell.getToken(0),"g3")==0) {  // grua abajo
-    myRobot.setGrua(GRUA_VALOR_ABAJO);
-    myRobot.grua.speed=myShell.getIntToken(1);
-  } else if (strcmp(myShell.getToken(0),"pa")==0) {  // robot pinza abierta
-    myRobot.setPinza(PINZA_ABIERTA);
-  } else if (strcmp(myShell.getToken(0),"pm")==0) {  // robot pinza mitad
-    myRobot.setPinza(PINZA_MITAD);
-  } else if (strcmp(myShell.getToken(0),"pc")==0) {  // robot pinza cerrada
-    myRobot.setPinza(PINZA_CERRADA);
-  } else if (strcmp(myShell.getToken(0),"b1")==0) {  //  gira base n veces
-    myRobot.giraBase(myShell.getIntToken(1));
-  } else if (strcmp(myShell.getToken(0),"ag")==0) {  //  gira step1
-    myRobot.apagarMotor(myRobot.grua);
-  } else if (strcmp(myShell.getToken(0),"s2")==0) {  //  gira step1
-    myRobot.do1step(&myRobot.grua,1);
-  } else if (strcmp(myShell.getToken(0),"s-1")==0) {  //  gira step1
-    myRobot.do1step(&myRobot.base,-1);
-  } else if (strcmp(myShell.getToken(0),"s1")==0) {  //  gira step1
-    myRobot.do1step(&myRobot.base,1);
-  } else if (strcmp(myShell.getToken(0),"ig")==0) {  //  init grua
-    myRobot.initGrua();
-//  } else if (strcmp(myShell.getToken(0),"gs")==0) {  // grua speed
-//    grua.setSpeed(myShell.getIntToken(1));
-  } else if (strcmp(myShell.getToken(0),"a0")==0) {  // analog read 0
-    for (k=1; k<3000; k++) {
-      Serial.println(analogRead(0));
-    }
-  } else if (strcmp(myShell.getToken(0),"michi")==0) {  // custom
-    valGrua=myShell.getIntToken(1);
-    for (k=1; k<myShell.getIntToken(2); k++) {
-    digitalWrite(6,HIGH);
-    digitalWrite(7,HIGH);
-    digitalWrite(8,LOW);
-    digitalWrite(9,LOW);
-    delay(valGrua);
-    digitalWrite(6,LOW);
-    digitalWrite(7,HIGH);
-    digitalWrite(8,HIGH);
-    digitalWrite(9,LOW);
-    delay(valGrua);
-    digitalWrite(6,LOW);
-    digitalWrite(7,LOW);
-    digitalWrite(8,HIGH);
-    digitalWrite(9,HIGH);
-    delay(valGrua);
-    digitalWrite(6,HIGH);
-    digitalWrite(7,LOW);
-    digitalWrite(8,LOW);
-    digitalWrite(9,HIGH);
-    delay(valGrua);
-    }
-    
-//    grua.setSpeed(myShell.getIntToken(1));
-//  } else if (strcmp(myShell.getToken(0),"b")==0) { // base  move
-//    base.setMaxSpeed(myShell.getIntToken(2));
-//    base.setAcceleration(myShell.getIntToken(3));
-//    base.move(myShell.getIntToken(1));
-//    while (base.speed() !=  0) {
-//      base.run();
-//      }
-//  } else if (strcmp(myShell.getToken(0),"g")==0) {
-//    grua.setMaxSpeed(myShell.getIntToken(2));
-//    grua.setAcceleration(myShell.getIntToken(3));
-//    grua.move(myShell.getIntToken(1));
-//    while (grua.speed() !=  0) {
-//      grua.run();
-//      }
-  } else {
-    Serial.print("*** Comando no encontrado ***\n");
-  }
-*/
 } 

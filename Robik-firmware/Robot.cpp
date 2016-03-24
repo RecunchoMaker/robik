@@ -127,63 +127,6 @@ void Robot::traslacionX(int giros) {
 
 }
 
-/*
-void Robot::traslacionX_antes(int giros) {
-    // supongo todo preparado!  
-    //Serial.print("* traslacionX ");
-    //Serial.println(giros);
-    if (giros == 2) {
-        // seq FDFDFD
-        //Serial.print("antes ");
-        //Serial.println(servoMuneca.read());
-        setServo(servoGrua, GRUA_ARRIBA, 50); //
-        setServo(servoMuneca, servoMuneca.read()==MUNECA0?MUNECA2-20:MUNECA0, 350);
-        //setServo(servoGrua, GRUA_ABAJO + GRUA_OFFSET, 300);
-        //Serial.print("despues ");
-        //Serial.println(servoMuneca.read());
-        setServo(servoGrua, GRUA_ABAJO, 90);
-    } else {
-            
-        // Levanto un poco
-        
-        if (giros == 991) { // 
-            // seq FDBU
-            setServo(servoGrua, GRUA_ARRIBA,100);
-            //setServo(servoMuneca, MUNECA2, 180);
-
-            setServo(servoGrua, GRUA_ARRIBA,1500);
-            if (servoMuneca.read() == MUNECA1) 
-                setServo(servoMuneca, MUNECA2, 180);
-            else
-                setServo(servoMuneca, MUNECA1, 180);
-
-            //setServo(servoMuneca, servoMuneca.read()+giros*90, 590);
-            Serial.println(servoMuneca.read());
-            //setServo(servoGrua, GRUA_ABAJO+1*(GRUA_ARRIBA-GRUA_ABAJO)/3,120);
-            //setServo(servoGrua, GRUA_ABAJO + GRUA_OFFSET, 60);
-            setServo(servoGrua, GRUA_ABAJO, 150);
-        } else {
-            setServo(servoGrua, GRUA_ARRIBA,130); 
-            setServo(servoMuneca, servoMuneca.read() + giros*90, 130);
-            setServo(servoGrua, GRUA_ABAJO,130); 
-            // (la parte de arriba va hacia adelante, hace falta esperar)
-            // seq FUBD
-            setServo(servoGrua, GRUA_ABAJO+2*(GRUA_ARRIBA-GRUA_ABAJO)/3,130); 
-            setServo(servoMuneca, servoMuneca.read()+giros*10, 70);
-
-            setServo(servoGrua, GRUA_ARRIBA,160); //
-            setServo(servoMuneca, servoMuneca.read()+giros*56, 120); //
-            // ... y bajo ya
-            //setServo(servoGrua, GRUA_ABAJO + GRUA_OFFSET, 61);
-            setServo(servoGrua, GRUA_ABAJO, 140); //
-            setServo(servoMuneca, servoMuneca.read()+giros*24, 180);
-        }
-
-    }
-    setServo(servoPinza, PINZA_MITAD, 1);
-
-}
-*/
 
 /*
  * Mueve el servo a la posicion indicada, esperando los milisegundos
@@ -192,27 +135,6 @@ void Robot::traslacionX_antes(int giros) {
  */
 void Robot::setServo(Servo servo, int nuevoEstado, int espera) {
     if (servo.read() != nuevoEstado) {
-        //Serial.print("setServo ");
-        /*
-        if (servo.read()==servoPinza.read()) {
-            Serial.print (" pinza ");
-        }
-        if (servo.read()==servoGrua.read()) {
-            Serial.print (" grua ");
-        }
-        if (servo.read()==servoMuneca.read()) {
-            Serial.print (" muneca ");
-        }
-        Serial.print(" de ");
-        Serial.print(servo.read());
-        //Serial.print(&servo==&servoMuneca?"muneca":(&servo==&servoGrua?"grua":"pinza"));
-    //    Serial.print(*servo==*servoMuneca?"muneca":(*servo==*servoGrua?"grua":"pinza"));
-        Serial.print(" a ");
-        Serial.print(nuevoEstado);
-        Serial.print(" espera:");
-        Serial.println(espera);
-        */
-        //Serial.println(nuevoEstado);
         servo.write(nuevoEstado);
 
         if (espera)
@@ -250,28 +172,12 @@ void Robot::giraBase(int caras) {
         do1step(&base, caras);
         //delay(i<i1?9:i<i2?6:i<i3?4:i<i4?6:9);
         delay(base.speed);
-        /*
-        if (i<abscaras*(PASOS_POR_CARA+pasos_retroceso)/2) {
-            if (aspeed>base.speed) aspeed--;
-        } else {
-            if (aspeed<10) aspeed++;
-        }
-        */
 
     }
-    //delay(150);
-    //aspeed=10;
+
     for (i = 0; i<pasos_retroceso; i++) {
         do1step(&base, -caras);
         delay(base.speed);
-        //delay(7);
-        /*
-        if (i<PASOS_RETROCESO/2) {
-            if (aspeed>base.speed) aspeed-=2;
-        } else {
-            if (aspeed<10) aspeed+=2;
-        }
-        */
     }
     actualDesfase+=desfase*caras;
     while (actualDesfase >= 1) {
@@ -288,59 +194,8 @@ void Robot::giraBase(int caras) {
 
     delay(300);
     apagarMotor(base);
-    // PRUEBA
-    /*
-    setServo(servoPinza, PINZA_CERRADA,300);
-    setServo(servoGrua, GRUA_ARRIBA, 180);
-    setServo(servoGrua, GRUA_ABAJO, 450);
-    setServo(servoPinza, PINZA_MITAD, 0);
-
-    */
 }
 
-/*
-void Robot::traslacion(int stepsGrua, int speed, int speed2) {
-    int k;
-
-    int j;
-    if (estadoMuneca > 90)
-        j=-1;
-    else 
-        j=1;
-
-    setServo(servoGrua, GRUA_ARRIBA, true);
-
-    if (estadoMuneca>90)
-        setMuneca(90);
-    else
-        setMuneca(180);
-
-    delay(500);
-    // 2. Hago el jirigai
-    /*
-    for (i=1; i<10; i++) {
-        for (k=1; k<20; k++) {
-        if (i<5)
-            do1step(&grua, 1);
-        else
-            do1step(&grua, -1);
-
-        delay(grua.speed);
-        }
-        setMuneca(estadoMuneca + j*9);
-    }
-
-    grua.speed = speed2;
-    // 3. Bajo de nuevo
-    for (i=0; i<stepsGrua; i++) {
-        do1step(&grua, -1);
-        delay(grua.speed);
-        //if (i%10 == 0) Serial.println(analogRead(FOTOCELGRUA));
-        if (gruaEstaAbajo()) break;
-    }
-    apagarMotor(grua);
-}
-*/
 
 void Robot::apagarMotor(s_motor motor) {
     for (i=0; i<=3; i++) 

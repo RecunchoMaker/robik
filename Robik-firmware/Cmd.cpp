@@ -57,7 +57,7 @@ static cmd_t *cmd_tbl_list, *cmd_tbl;
 
 // text strings for command prompt (stored in flash)
 const char cmd_banner[] PROGMEM = "*************** CMD *******************";
-const char cmd_prompt[] PROGMEM = "robot$ ";
+const char cmd_prompt[] PROGMEM = "robik$ ";
 const char cmd_unrecog[] PROGMEM = "Error: comando no encontrado";
 
 static char last_cmd[MAX_MSG_SIZE];
@@ -78,11 +78,13 @@ void cmd_display()
     char buf[50];
 
     Serial.println();
-
+    // Menos verbose
+    /*
     strcpy_P(buf, cmd_banner);
     Serial.println(buf);
     Serial.print(freeRam());
     Serial.println(" bytes free");
+    */
 
     strcpy_P(buf, cmd_prompt);
     Serial.print(buf);
@@ -256,7 +258,7 @@ void cmdAdd(char *name, void (*func)(int argc, char **argv), char *description)
 
 void cmdAdd(char *name, void (*func)(int argc, char **argv))
 {
-    cmdAdd(name, func, "");
+    cmdAdd(name, func, const_cast<char *>(""));
 }
 
 /**************************************************************************/
