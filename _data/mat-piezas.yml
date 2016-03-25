@@ -6,7 +6,7 @@
 - pieza: hombros.stl
   imagen: img/png-piezas/hombros.png
   descripcion:
-                        <p>Los hombros se colocan entre los dos soportes laterales, y sostienen el servo que mueve las pinzas. Adem&aacute;s dan soporte a los rodamientos en los que encajan los brazos</p>
+                        <p>Los hombros se colocan entre los dos soportes laterales, y sostienen el servo que mueve las pinzas. Adem&aacute;s dan soporte a los rodamientos en los que encajan los brazos.</p>
 
 
 - pieza: brazo-izquierdo.stl y brazo-derecho.stl
@@ -22,28 +22,43 @@
 - pieza: base-cuadrada.stl
   imagen: img/png-piezas/base-cuadrada.png
   descripcion:
-                        <p>1</p>
-                        <p>Aqu&iacute; se apoya el cubo. Tiene cuatro huecos para atornillarlo a la rueda dentada que engrana con el motor, y unos huecos para introducir las solapas que permiten girar una cara del cubo cuando los brazos est&aacute;n cerrados</p>
+                        <p>Aqu&iacute; se apoya el cubo. Tiene cuatro huecos para atornillarlo a la rueda dentada que engrana con el motor, y unos huecos para introducir las solapas que permiten girar una cara del cubo cuando los brazos est&aacute;n cerrados.</p>
 
 - pieza: solapas-base.stl
   imagen: img/png-piezas/solapas-base.png
-  descripcion: <p>Necesitas al menos cuatro de estas peque&ntilde;as piezas, que son las que hacen que el cubo se mueva cuando se mueve la base. Hay ocho huecos en la base cuadrada para estas piezas, aunque nosotros hemos comprobado que con cuatro es suficiente</p>
+  descripcion: <p>Necesitas al menos cuatro de estas peque&ntilde;as piezas, que son las que hacen que el cubo se mueva cuando se mueve la base. Hay ocho huecos en la base cuadrada para estas piezas, aunque nosotros hemos comprobado que con cuatro es suficiente.</p>
 
 - pieza: rueda-dentada-grande.stl
   imagen: img/png-piezas/rueda-dentada-grande.png
   descripcion:
-                        <p>Esta rueda engrana con la peque&ntilde;a que est&aacute; unida al motor. En ella encaja...xxx</p>
+                        <p>Esta rueda engrana con la peque&ntilde;a que est&aacute; unida al motor. En ella insertamos el rodamiento que encaja en el soporte del motor y tambi&eacute;n en ella se atornilla la base cuadrada en la que se apoya el cubo de Rubik.</p>
+
+- pieza: rueda-dentada-pequena.stl
+  imagen: img/png-piezas/rueda-dentada-pequena.png
+  descripcion:
+                        <p>Esta peque&ntilde;a rueda se inserta en el eje del motor.</p>
+
+- pieza: base-motor.stl                        
+  imagen: img/png-piezas/base-motor.png
+  descripcion: 
+                        <p>En esta pieza encaja nuestro motor y el rodamiento que aloja la rueda dentada grande.</p>
+
+- pieza: capuchon-muneca-der.stl                        
+  imagen: img/png-piezas/capuchon-muneca-der.png
+  descripcion: 
+                        <p>Se inserta un rodamiento en esta pieza y &eacute;ste se encaja en el brazo derecho, para que el cubo gire con libertad cuando el servo del otro brazo se mueva.</p>
+
+- pieza: enganche-servo-pinza.stl
+  imagen: img/png-piezas/enganche-servo-pinza.png
+  descripcion: <p>Esta pieza se atornilla al aspa del servo encajado en los hombros. En ella atornillamos a su vez las <i>plaquita-pinza</i> que se unen a los brazos para poder abrirlos y cerrarlos.</p>
+
+- pieza: plaquita-pinza.stl
+  imagen: img/png-piezas/plaquitas-pinzas.png
+  descripcion: <p>Se utilizan <b>cuatro</b> de estas piezas (dos en cada lado), para unir el enganche-servo-pinza a los brazos. No usamos una &uacute;nica pieza para poder ajustar con precisi&oacute;n la apertura de los brazos.</p>,
 
 - pieza: apoyo-grua.stl
   imagen: img/png-piezas/apoyo-grua.png
   descripcion:
                         <p>1</p>
                         <p>Esta pieza esta atornillada en el hombro y enganchada al servo trasero.</p>
-
-- pieza: soporte-motor.stl                        
-  imagen: img/png-piezas/soporte-motor.png
-  descripcion: 
-                        <p>1</p>
-                        <p>En esta pieza encaja nuestro motor y el rodamiento que aloja la rueda dentada grande</p>
-
 

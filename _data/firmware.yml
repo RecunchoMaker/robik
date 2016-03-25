@@ -20,35 +20,17 @@
                     </ol>
 
 - titulo: Conect&aacute;ndose a <strong>Robik</strong>
-  foto: img/firm-030-conexion.jpg
+  codigo: $ picocom /dev/ttyUSB0<br>robik$ _</br><br>robik$ h</br>pa - pinzaAbierta<br>pc - pinzaCerrada<br>pc - pinzaSemiabierta<br>...<br>robik$ _
   texto: 
                     <p>
                         Una vez instalado el firmware, es el momento de conectarse a &eacute;l a trav&eacute;s del puerto USB. Puedes utilizar cualquier programa monitor serie. En este ejemplo usamos <i>picocom</i>, ejecut&aacute;ndolo desde una ventana de terminal poniendo como par&aacute;metro el puerto serie que nos proporciona Arduino (en linux, normalmente /dev/ttyUSB0)
-                    </p>
-                    <div>
-                    <pre class="terminal">
-                    <code>$ picocom /dev/ttyUSB0<br>
-                    robik$ _
-                    </code>
-                    </pre>
-                    </div>
-                    <p>
+                        </p>
+                        <p>
                         El firmware nos proporciona una serie de comandos que podemos teclear para ejecutar movimientos en el robot. El comando <strong>h</strong> (help) lista las instrucciones disponibles.
                     </p>
-                    <div>
-                    <pre class="terminal">
-                    <code>robik$ h<br>
-                    pa - pinzaAbierta<br>
-                    pc - pinzaCerrada<br>
-                    pc - pinzaSemiabierta<br>
-                    ...<br>
-                    robik$ _
-                    </code>
-                    </pre>
-                    </div>
 
 - titulo: Calibraci&oacute;n de la apertura de las pinzas
-  foto: img/cons-030-servos.jpg
+  foto: img/firm-030-pa-pc.jpg
   texto: 
                     <p>
                     Los comandos <code class="terminal">pa</code>, <code class="terminal">pc</code> y <code class="terminal">ps</code> dejan las pinzas en una posici&oacute;n <i>abierta</i>, <i>cerrada</i> y <i>semicerrada</i> respectivamente.
@@ -59,30 +41,32 @@
                     </ul>
                     </p>
                     <p>
-                        Calibramos primeramente la longitud de las plaquitas que unen el servo de las pinzas con los brazos. Debemos tener estas piezas desatornilladas seg&uacute;n vimos en el primer paso, para que el servo que mueve las pinzas gire libremente, sin estar conectado a los brazos.
+                    Coloca el aspa del servo de manera que en la posici&oacute;n <b>abierta</b> quede aproximadamente vertical ligeramente a la izquierda (como un reloj a las 11&#58;25), y en la posici&oacute;n <b>cerrada</b> quede horizontal un poco hacia abajo (como un reloj a las 8&#58;10).
                     </p>
-                    <p>
-                        Cerramos la pinza con el comando <code class="terminal">pc</code> (pinza cerrada). Oiremos el servo moverse a una posici&oacute;n concreta. En esta posici&oacute;n, el aspa del servo debe estar m&aacute;s o menos horizontal (si no es as&iacute;, separa el aspa del servo y vu&eacute;lvela a montar). Es el momento de colocar el cubo en la base de <strong>Robik</strong>, apretar las pinzas con nuestros dedos para que quede perfectamente agarrado, fijar los brazos a las plaquitas y terminar de apretar los tornillos de las mismas.
-                    </p>
+
+- titulo: Afinando la posici&oacute;n <b>cerrada</b>
+  foto: img/firm-040-pinza-cerrada.jpg
+  texto: <p>Ahora, cerrando las pinzas con el comando <code>pc</code>, colocamos el cubo de Rubik en la base y atornillamos las plaquitas a los brazos de manera que el cubo quede perfectamente agarrado en esa posici&oacute;n.</p>
                     <p>
                     Una vez hecho esto, los comandos <code>pa</code>, <code>pc</code> y <code>ps</code> deber&aacute;n funcionar correctamente. Si las posiciones son <i>aproximadamente</i> correctas pero consideras que se puede afinar algo m&aacute;s, siempre puedes editar los par&aacute;metros del firmware, como se indica m&aacute;s adelante.
+                    </p>
 
 - titulo: Calibraci&oacute;n de la gr&uacute;a
-  foto: img/cons-040-base.jpg
+  foto: img/firm-050-grua.jpg
   texto: 
                     <p>
-                        La gr&uacute;a se calibra de un modo similar. Con los comandos <code>ga</code>, <code>gb</code> y <code>gi</code> la gr&uacute;a se sit&uacute;a en una posici&oacute;n <i>arriba</i>, <i>abajo</i> y <i>semiarriba</i> (o semiabajo) respectivamente.
+                      La gr&uacute;a se calibra de un modo similar aunque es mucho m&aacute;s sencillo. Con los comandos <code>ga</code>, <code>gb</code> y <code>gs</code> la gr&uacute;a se sit&uacute;a en una posici&oacute;n <i>arriba</i>, <i>abajo</i> y <i>semiarriba</i> (o semiabajo) respectivamente.
                     </p>
                     <ul>
-                        <li><strong>Gr&uacute;a arriba{:} </strong>esta posici&oacute;n se usa para que, con el cubo agarrado, la mu&ntilde;eca lo gire sobre s&iacute; mismo.</li>
-                        <li><strong>Gr&uacute;a abajo{:} </strong>en esta posici&oacute;n las pinzas deben quedar perfectamente alineadas con el centro del cubo, de manera que al cerrar las pinzas &eacute;ste quede perfectamente agarrado por el centro.</li>
-                        <li><strong>Gr&uacute;a semiarriba{:} </strong>esta posici&oacute;n se usa cuando se gira la cara inferior del cubo, para que no estorben las piezas de la mu&ntilde;eca. Del mismo modo que antes, lo entender&aacute;s perfectamente cuando lo veas moverse.</li>
+                        <li><strong>Gr&uacute;a arriba&#58; </strong>esta posici&oacute;n se usa para que, con el cubo agarrado, la mu&ntilde;eca lo gire sobre s&iacute; mismo.</li>
+                        <li><strong>Gr&uacute;a abajo&#58; </strong>en esta posici&oacute;n las pinzas deben quedar perfectamente alineadas con el centro del cubo, de manera que al cerrar las pinzas &eacute;ste quede perfectamente agarrado por el centro.</li>
+                        <li><strong>Gr&uacute;a semiarriba&#58; </strong>esta posici&oacute;n se usa cuando se gira la cara inferior del cubo, para que no estorben las piezas de la mu&ntilde;eca. Del mismo modo que antes, lo entender&aacute;s perfectamente cuando lo veas moverse.</li>
                     </ul>
                     <p>
-                        Bajamos la gr&uacute;a con el comando <code>gb</code>. El servo debe quedar en una posici&oacute;n m&aacute;s o menos vertical hacia abajo (igual que en el caso anterior, si no es as&iacute;, separa el aspa y col&oacute;cala en posici&oacute;n vertical)
+                        Bajamos la gr&uacute;a con el comando <code>gb</code>. El servo debe quedar en una posici&oacute;n m&aacute;s o menos horizontal (igual que en el caso anterior, si no es as&iacute;, separa el aspa y col&oacute;cala en posici&oacute;n horizontal)
                     </p>
                     <p>
-                        Ahora intenta ajustar la gr&uacute;a para que las mu&ntilde;ecas queden a la altura del centro del cubo (quiz&aacute; te sea m&aacute;s f&aacute;cil de alinear si previamente lanzas el comando <code>ps</code>. En esa posici&oacute;n termina de apretar la cuerdecita a la polea e los hombros.
+                        Ahora intenta ajustar la gr&uacute;a para que las mu&ntilde;ecas queden a la altura del centro del cubo (quiz&aacute; te sea m&aacute;s f&aacute;cil de alinear si previamente lanzas el comando <code>ps</code> para acercar el las pinzas al cubo pero sin agarrarlo. En esa posici&oacute;n termina de apretar la cuerdecita a la polea e los hombros.
                     </p>
 
 - titulo: Primeros experimentos

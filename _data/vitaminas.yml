@@ -14,5 +14,4 @@
   imagen: img/vit-tabla.jpg
   cantidad: 1
   precio: < 1 &euro;
-  comentarios: Utiliza cualquier trozo de madera (melamina, dmf...) para atornillar la estructura. La medida m&iacute;nima es xxx aunque es preferible usar una algo m&aacute;s grande para dejar hueco para el arduino y futuras ampliaciones (una botonera, un display, un soporte para c&aacute;mara web...)
-
+  comentarios: Utiliza cualquier trozo de madera (melamina, dmf...) para atornillar la estructura. La medida m&iacute;nima es 130x150 mm, aunque es much&iacute;simo mejor usar una algo m&aacute;s grande para dejar hueco para el arduino y futuras ampliaciones (una botonera, un display, un soporte para c&aacute;mara web...). La nuestra mide 150x230 mm.
