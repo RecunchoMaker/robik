@@ -21,7 +21,6 @@ void Robot::init() {
     int lectura;
     int i;
 
-    nombre = 'A';
     // Se inicializan pines
     servoPinza.attach(SERVOPINZA);
     servoMuneca.attach(SERVOMUNECA);
@@ -73,8 +72,8 @@ void Robot::preparaY() {
  */
 void Robot::preparaGiro() {
     Serial.println("* preparaGiro");
-    if (servoPinza.read()!=PINZA_MITAD)
-        setServo(servoPinza, PINZA_MITAD, 80);
+    if (servoPinza.read()!=PINZA_SEMI)
+        setServo(servoPinza, PINZA_SEMI, 80);
     setServo(servoGrua, GRUA_MITAD, 120);
     setServo(servoPinza, PINZA_CERRADA, 170);
 }
@@ -85,7 +84,7 @@ void Robot::preparaGiro() {
 void Robot::preparaX(int giros) {
     Serial.print("* preparaX");
     Serial.println(giros);
-    setServo(servoPinza, PINZA_MITAD, 100);
+    setServo(servoPinza, PINZA_SEMI, 100);
     setServo(servoGrua, GRUA_ABAJO, 140);
     if (giros==2 && servoMuneca.read()==MUNECA1) {
         // Solo preparo la muneca esta en el centro
@@ -123,7 +122,7 @@ void Robot::traslacionX(int giros) {
             break;
     }
 
-    setServo(servoPinza, PINZA_MITAD, 90);
+    setServo(servoPinza, PINZA_SEMI, 90);
 
 }
 
@@ -190,7 +189,7 @@ void Robot::giraBase(int caras) {
         do1step(&base, 1);
         delay(base.speed);
     }
-    setServo(servoPinza, PINZA_MITAD, 101);
+    setServo(servoPinza, PINZA_SEMI, 101);
 
     delay(300);
     apagarMotor(base);

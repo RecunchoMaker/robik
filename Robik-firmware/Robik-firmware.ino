@@ -26,28 +26,11 @@ See LICENSE.txt for details
 #include "CuboControl.h"
 
 #include "Cmd.h"
-//#include <Stepper.h> 
-//#include <AccelStepper.h> 
 
-// change this to the number of steps on your motor
-//# el pequenito 32, el de la impresora 48
-//#define STEPS 48 
-#define STEPS 32 
-
-// create an instance of the stepper class, specifying
-// the number of steps of the motor and the pins it's
-// attached to
-//Stepper stepper(STEPS, 2, 5, 4, 3);
-//AccelStepper grua(4, 2,5,4,3);
-//AccelStepper base(4, 6,8,9,7);
 Robot myRobot;
 
 
-//Servo servoMuneca;  // create servo object to control a servo
-//Servo servoPinza;  // create servo object to control a servo
-
 int motor;
-char junk;  // mierda que puede entrar por el serie
 
 int i,j,k;
 
@@ -61,13 +44,10 @@ void setup()
 
   cc.init(myRobot);
 
-  
+  // Sin revisar
   cmdAdd(const_cast<char *>("ss"), local_set_speed, const_cast<char *>("local_set_speed"));
   cmdAdd(const_cast<char *>("st"), local_giraBase , const_cast<char *>("local gira base 1 paso"));
 
-  cmdAdd(const_cast<char *>("pa"), local_pa, const_cast<char *>("pinzaAbierta"));
-  cmdAdd(const_cast<char *>("pc"), local_pc, const_cast<char *>("pinzaCerrada"));
-  cmdAdd(const_cast<char *>("pm"), local_pm, const_cast<char *>("pinzaMitad"));
 
   cmdAdd(const_cast<char *>("sm"), local_setMuneca, const_cast<char *>("setMuneca(int)"));
 
@@ -87,6 +67,12 @@ void setup()
   cmdAdd(const_cast<char *>("tX"), local_traslacionX, const_cast<char *>("traslacion X (num giros de -1 a 2"));
 
   cmdAdd(const_cast<char *>("demo"), local_demo);
+
+  // Comandos del prompt
+  cmdAdd(const_cast<char *>("ps"), local_ps, const_cast<char *>("pinzaSemicerrada"));
+  cmdAdd(const_cast<char *>("pc"), local_pc, const_cast<char *>("pinzaCerrada"));
+  cmdAdd(const_cast<char *>("pa"), local_pa, const_cast<char *>("pinzaAbierta"));
+  
 }
 
 void local_demo(int arg_cnt, char **args) {
@@ -123,11 +109,26 @@ void local_demo(int arg_cnt, char **args) {
         while ((s=random(-2,3))==0);
         myRobot.preparaGiro();
         myRobot.giraBase(s);
-        myRobot.setServo(myRobot.servoPinza,PINZA_MITAD, false);
+        myRobot.setServo(myRobot.servoPinza,PINZA_SEMI, false);
         rant=r;
     }
 }
 
+// Revisados
+void local_pa(int arg_cnt, char **args)
+{
+  myRobot.setServo(myRobot.servoPinza, PINZA_ABIERTA, false);
+}
+void local_pc(int arg_cnt, char **args)
+{
+  myRobot.setServo(myRobot.servoPinza, PINZA_CERRADA, false);
+}
+void local_ps(int arg_cnt, char **args)
+{
+  myRobot.setServo(myRobot.servoPinza,PINZA_SEMI, false);
+}
+
+// Sin revisar
 void local_set_speed(int arg_cnt, char **args) {
     myRobot.setSpeed(atoi(args[1]));
 }
@@ -220,19 +221,6 @@ void local_setPinza(int arg_cnt, char **args)
 {
   myRobot.setServo(myRobot.servoPinza, atoi(args[1]), false);
 }
-void local_pm(int arg_cnt, char **args)
-{
-  myRobot.setServo(myRobot.servoPinza,PINZA_MITAD, false);
-}
-void local_pc(int arg_cnt, char **args)
-{
-  myRobot.setServo(myRobot.servoPinza, PINZA_CERRADA, false);
-}
-void local_pa(int arg_cnt, char **args)
-{
-  myRobot.setServo(myRobot.servoPinza, PINZA_ABIERTA, false);
-}
-
 
 
 
