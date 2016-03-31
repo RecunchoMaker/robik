@@ -69,6 +69,30 @@
                         Ahora intenta ajustar la gr&uacute;a para que las mu&ntilde;ecas queden a la altura del centro del cubo (quiz&aacute; te sea m&aacute;s f&aacute;cil de alinear si previamente lanzas el comando <code>ps</code> para acercar el las pinzas al cubo pero sin agarrarlo. En esa posici&oacute;n termina de apretar la cuerdecita a la polea e los hombros.
                     </p>
 
+- titulo: La <i>mu&ntilde;eca</i>
+  foto: img/firm-050-grua.jpg
+  texto: 
+                    <p>
+                    El servo que est&aacute; anclado en el brazo lo llamamos <i>mu&ntilde;</i>eca&#58; es el que gira el cubo en (el eje de las X) cuando las pinzas lo tienen agarrado y la gr&uacute;a est&aacute; subida. Como los servos s&oacute;lo giran 180º, usamos s&oacute;lo tres posiciones&#58; <code>m0</code>, <code>m1</code> y <code>m2</code>. Prueba estos comandos y deber&iacute;a moverse 0, 90 y 180º; respectivamente.
+                    </p>
+
+- titulo: Probando el motor
+  foto: img/firm-050-grua.jpg
+  texto: 
+                    <p>
+                    Antes de mover el motor con un comando, aseg&uacute;rate que las ruedas engranan correctamente movi&eacute;ndo la base con la mano. Si todo se mueve con suavidad puedes probar el comando <code>ba <i>numero_de_giros</i></code>.</p><p> Los giros se corresponden con un cuarto de vuelta completa. As&iacute;, por ejemplo, <code>ba 2</code> gira la base en el sentido de las agujas del reloj. Y puedes poner n&uacute;meros negativos para girar en el sentido contrario. Por ejemplo <code>ba -1</code> hace un cuarto de vuelta en el otro sentido.
+                    </p>
+
+- titulo: Ultimos ajustes del firmware
+  foto: img/cons-050-empezando-atornillar.jpg
+  texto: 
+                    <p>
+                    Si no estas conforme con los ajustes mec&aacute;anicos, siempre puedes configurar los par&aacute;metros del firmware a tu gusto. A veces puede ser complicado ajustar correctamente las piezas ya que cuando se aprientan los tornillos en el &uacute;ltimo momento se nos desplaza algo. 
+                    <p>
+                    Todas las posiciones predefinidas para las pinzas, la gr&uacute;a, la mu&ntilde;eca, y el n&uacute;mero de pasos del motor est&aacute;n especificados en el fichero <strong>Robot.h</strong>. Experimenta con los par&aacute;metros y busca la combinaci&oacute;n que m&aacute;s te convenza
+                    </p>
+                    <p>Haz un cambio, sube el firmware, prueba y vuelve a editar hasta que est&eacute;s contento con el resultado.<p>
+
 - titulo: Primeros experimentos
   foto: img/cons-050-empezando-atornillar.jpg
   texto: 
@@ -92,29 +116,22 @@
                         </ol>
                     </ul>
                     <p>
-                    Si detectas alg&uacute;n movimiento que no es del todo exacto, repite los ajustes de la mec&aacute;nica hasta que consigas que funcione perfectamente
-
-- titulo: Últimos ajustes
-  foto: img/cons-060-brazos.jpg
-  texto: 
-                    <p>
-                        Si no estas conforme con los ajustes mec&aacute;anicos, siempre puedes configurar los par&aacute;metros del firmware a tu gusto.
-                    </p>
-                    <p>
-                    Todas las posiciones predefinidas para las pinzas, la gr&uacute;a, la mu&ntilde;eca, y el n&uacute;mero de pasos del motor est&aacute;n especificados en el fichero <strong>settings.h</strong>. Experimenta con los par&aacute;metros y busca la combinaci&oacute;n que m&aacute;s te convenza
-                    </p>
+                    Si detectas alg&uacute;n movimiento que no es del todo exacto, repite los ajustes en <strong>Robot.h</strong>consigas que funcione perfectamente
 
 - titulo: El comando <strong>sec</strong>
   foto: img/cons-070-servo-hombros.jpg
   texto: 
                     <p>
-                    Un comando muy &uacute;til es <code>seq <i>secuencia</i></code>, que te permite ejecutar secuencias en el formato <a href="https://es.wikipedia.org/wiki/Cubo_de_Rubik#Notaci.C3.B3n">singmaster</a>. Por ejemplo, este comando hace el movimiento conocido como <i>sexy move</i>.
+                    Un comando muy &uacute;til es <code>seq <i>secuencia</i></code>, que te permite ejecutar secuencias en el formato <a href="https://es.wikipedia.org/wiki/Cubo_de_Rubik#Notaci.C3.B3n">singmaster</a> (la versi&oacute;n en ingl&eacute;s). Por ejemplo, este comando hace el movimiento conocido como <i>sexy move</i>, que consiste en mover la cara de arriba (Up) la cara de la derecha (Right) y luego de nuevo la cara de arriba en sentido contrario (U') y derecha en sentido contrario (R').
                     </p>
                     <p>
                     <code>seq URU'R'</code>
                     </p>
                     <p>
-                    Este comando tambi&eacute;n te permite depurar de forma m&aacute;s sencilla los movimientos del cubo para optimizar los movimientos, ya sea modificando los par&aacute;metros en <strong>settings.h</strong>, afinando los tiempos de espera en <strong>robot.c</strong> o modificando cualquier parte del firmware que se te ocurra.
+                    Este comando tambi&eacute;n te permite depurar de forma m&aacute;s sencilla los movimientos del cubo para optimizar los movimientos, ya sea modificando los par&aacute;metros en <strong>Robot.h</strong>, afinando los tiempos de espera en <strong>robot.c</strong> o modificando cualquier parte del firmware que se te ocurra.
+                    </p>
+                    <p>
+                    Por ejemplo, el comando <code>seq FUBR</code> realiza cuatro giros seguidos del cubo en el eje de las X, y as&iacute; puedes ver c&oacute;mo se comporta en movimientos complejos y seguir afinando los par&aacute;metros.
                     </p>
 
 - titulo: Experimenta, experimenta, experimenta!
@@ -123,5 +140,12 @@
                     <p>
                         ...y hasta aqu&iacute; hemos llegado! No dudes en experimentar con todas las partes de tu robot y comentarnos cualquier problema o mejora que se te ocurra.
                     </p>
-
-
+                    <p>
+                    En la carpeta <strong>software</strong> de <a href="https&#58;//github.com/RecunchoMaker/robik">github</a> hemos puesto algunos ejemplos de programas para manejar Robik. 
+                    </p>
+                    <p>
+                    Y recuerda&#58; esto es un proyecto de hardware/software libre que cuenta contigo para poder mejorar. Cualquier aportaci&oacute;n ser&aacute; bienvenida.
+                    </p>
+                    <p>
+                    Que el esp&iacute;ritu maker os acompa&ntilde;e!
+                    <p>

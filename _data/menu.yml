@@ -22,6 +22,8 @@
   url: enlaces.html
   submenu:
     - titulo: Facebook
-      url: facebook.com/recunchomaker
+      url: http://facebook.com/recunchomaker
     - titulo: Twitter
-      url: facebook.com/recunchomaker
+      url: http://facebook.com/recunchomaker
+    - titulo: e-mail
+      url: mailto:robik@recunchomaker.org

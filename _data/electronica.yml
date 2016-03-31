@@ -13,7 +13,7 @@
                         En principio, este robot estar&aacute; siempre conectado a un ordenador a trav&eacute;s del puerto USB, que puede proporcionar hasta 500mA de corriente. Dado que un servo puede necesitar del orden de 120mA, con tres servos mas el propio consumo del arduino estamos en el l&iacute;mite de la especificaci&oacute;n USB, as&iacute; que hemos decidido proporcionar los 5v a los servos con una fuente de alimentaci&oacute;n externa.
                     </p>
                     <p>
-                        Tambi&eacute;n necesitamos 12v para alimentar el motor. Como necesitamos dos voltajes, una opci&oacute;n muy c&oacute;moda es utilizar una fuente ATX de cualquier ordenador viejo. Hay muchos tutoriales en internet de c&oacute;mo utilizar las fuentes ATX como fuentes de laboratorio. Y si no quieres estropear tu fuente, siempre puedes utilizar placas como la ATX Board de staticboards.com que se enchufa directamente al conector de la fuente y ofrece conectores con los distintos voltajes.
+                    Tambi&eacute;n necesitamos 12v para alimentar el motor. Como necesitamos dos voltajes, una opci&oacute;n muy c&oacute;moda es utilizar una fuente ATX de cualquier ordenador viejo. Hay muchos tutoriales en internet de c&oacute;mo utilizar las fuentes ATX como fuentes de laboratorio. Y si no quieres estropear tu fuente, siempre puedes utilizar placas como la <a href="http://www.staticboards.es/productos/atxboard">ATX Board</a> de <a href="http://www.staticboards.es">staticboards.com</a> que se enchufa directamente al conector de la fuente y ofrece conectores con los distintos voltajes.
                     </p>
 
 - titulo: Preparando un <i>escudo</i>
@@ -124,6 +124,6 @@
                     <p>
                     Fija el driver al escudo (nosotros utilizamos un poco de cinta de doble capa) y el arduino a la base de madera.
                     <p>
-                        Y ya s&oacute;lo falta instalar el <a href="firmware.html">firmware</a>!
+                        Y ya s&oacute;lo falta instalar el <a href="firmware.html">firmware</a> y hacer los &uacute;timos ajustes!
                     </p>
 

@@ -22,10 +22,13 @@ overflow-y: scroll;
 
 .bg-foto {
     background-image: url('../img/bg-robik.jpg');
+    #background-size: 100%;
     background-position: right;
+    background-repeat: no-repeat;
     height: 298px;
     margin-top: -20px;
     margin-bottom: 18px;
+    overflow:hidden
 }
 
 .logo {
@@ -33,7 +36,7 @@ overflow-y: scroll;
 }
 
 .bg-title {
-    margin: 130px;
+    margin: 100px;
     position: absolute;
     top: -65px;
     z-index: 10;
