@@ -19,9 +19,9 @@
 /*--------------------------------------------------------------------------------
  * Grados de apertura de las tres posiciones de PINZA
  *------------------------------------------------------------------------------*/
-#define PINZA_ABIERTA 135
-#define PINZA_SEMI 80
-#define PINZA_CERRADA 45
+#define PINZA_ABIERTA 100
+#define PINZA_SEMI 25
+#define PINZA_CERRADA 5
 
 /*--------------------------------------------------------------------------------
  * Grados de giro de las tres posiciones de la MUNECA
@@ -79,9 +79,6 @@ class Robot {
         } base ;
             
 
-        //void setGrua(int nuevoEstado);
-        //void levantaGrua();
-        //void bajaGrua();
         void do1step(s_motor* motor, int direccion);
         void traslacion(int stepsGrua, int speed, int speed2); 
 
