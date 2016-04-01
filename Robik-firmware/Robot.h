@@ -19,9 +19,9 @@
 /*--------------------------------------------------------------------------------
  * Grados de apertura de las tres posiciones de PINZA
  *------------------------------------------------------------------------------*/
-#define PINZA_ABIERTA 90
-#define PINZA_SEMI 35
-#define PINZA_CERRADA 0
+#define PINZA_ABIERTA 135
+#define PINZA_SEMI 80
+#define PINZA_CERRADA 45
 
 /*--------------------------------------------------------------------------------
  * Grados de giro de las tres posiciones de la MUNECA
@@ -33,9 +33,9 @@
 /*--------------------------------------------------------------------------------
  * Grados de giro de las tres posiciones de la GRUA
  *------------------------------------------------------------------------------*/
-#define GRUA_ARRIBA 20
-#define GRUA_MITAD 60
-#define GRUA_ABAJO 120
+#define GRUA_ARRIBA 130
+#define GRUA_MITAD 40
+#define GRUA_ABAJO 10
 
 /*--------------------------------------------------------------------------------
  * Pasos que necesita el motor para girar una cara 90º

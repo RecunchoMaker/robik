@@ -50,6 +50,7 @@ void setup()
 
 
   cmdAdd(const_cast<char *>("sm"), local_setMuneca, const_cast<char *>("setMuneca(int)"));
+  cmdAdd(const_cast<char *>("d1"), local_d1, const_cast<char *>("do1step"));
 
   cmdAdd(const_cast<char *>("sg"), local_set_Grua, const_cast<char *>("set_Grua(position)"));
   cmdAdd(const_cast<char *>("gu"), local_set_GruaUP, const_cast<char *>("grua up"));
@@ -131,6 +132,10 @@ void local_ps(int arg_cnt, char **args)
 // Sin revisar
 void local_set_speed(int arg_cnt, char **args) {
     myRobot.setSpeed(atoi(args[1]));
+}
+
+void local_d1(int arg_cnt, char **args) {
+    myRobot.do1step(&myRobot.base, atoi(args[1]));
 }
       
 void local_preparaX(int arg_cnt, char **args) {
@@ -232,19 +237,6 @@ void local_setDesfase(int arg_cnt, char **args)
 void local_giraBase(int arg_cnt, char **args)                                             
 {                                                                                
   myRobot.giraBase(atoi(args[1]));
-  delay(200);
-  myRobot.apagarMotor(myRobot.base);
-}
-
-void local_base(int arg_cnt, char **args) {
-  Serial.write("Voy a qui");
-  for (i=0; i<atoi(args[1]); i++) {
-      Serial.write("Movi a pos ");
-      Serial.println(myRobot.base.position);
-      Serial.println(myRobot.base.speed);
-      myRobot.do1step(&myRobot.base,atoi(args[1]));
-      delay(myRobot.base.speed);
-  }
   delay(200);
   myRobot.apagarMotor(myRobot.base);
 }
