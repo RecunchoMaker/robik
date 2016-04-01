@@ -1,0 +1,14 @@
+{
+    "hs_param2": 1, 
+    "hs_param3": 1, 
+    "hs_maxLineGap": 9, 
+    "hs_threshold1": 0, 
+    "hs_threshold2": 446, 
+    "hs_apertura": 1, 
+    "hs_param1": 10, 
+    "hs_minLineLength": 92, 
+    "hs_dilate_iteracciones": 2, 
+    "hs_kernel_erode": 1, 
+    "hs_kernel_dilate": 1, 
+    "hs_blur": 5
+}

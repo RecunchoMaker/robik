@@ -11,17 +11,17 @@
 #define SERVOGRUA 5
 #define SERVOMUNECA 3
 
-#define BASE0 8
-#define BASE1 9
-#define BASE2 10
-#define BASE3 11
+#define BASE0 11
+#define BASE1 10
+#define BASE2 9
+#define BASE3 8
 
 /*--------------------------------------------------------------------------------
  * Grados de apertura de las tres posiciones de PINZA
  *------------------------------------------------------------------------------*/
 #define PINZA_ABIERTA 100
 #define PINZA_SEMI 25
-#define PINZA_CERRADA 5
+#define PINZA_CERRADA 0
 
 /*--------------------------------------------------------------------------------
  * Grados de giro de las tres posiciones de la MUNECA

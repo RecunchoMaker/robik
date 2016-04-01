@@ -45,10 +45,12 @@ void setup()
   cc.init(myRobot);
 
   //cmdAdd(const_cast<char *>("cc"), local_printCubo, const_cast<char *>("printCubo"));
-  //cmdAdd(const_cast<char *>("init"), local_cubo_init);
 
 
   // Comandos del prompt
+  cmdAdd(const_cast<char *>("init"), local_cubo_init);
+  cmdAdd(const_cast<char *>("tx"), local_tx, const_cast<char *>("traslacion <X>"));
+
   cmdAdd(const_cast<char *>("seq"), local_seq, const_cast<char *>("seq <secuencia>"));
 
   cmdAdd(const_cast<char *>("ba"), local_ba, const_cast<char *>("giraBAse <x>"));
@@ -164,6 +166,12 @@ void local_printCubo(int arg_cnt, char **args)
   cc.printState();
 }
       
+// Funciones auxiliares
+void local_tx(int arg_cnt, char **args) {
+    myRobot.preparaX(atoi(args[1]));
+    myRobot.traslacionX(atoi(args[1]));
+}
+
 void loop() 
 { 
  cmdPoll();  

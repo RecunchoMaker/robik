@@ -53,7 +53,7 @@ void Robot::init() {
 }
 
 void Robot::setSpeed(int i) {
-    Serial.println("preparaY");
+    // Serial.println("preparaY");
     base.speed = i;
 }
 
@@ -61,7 +61,7 @@ void Robot::setSpeed(int i) {
  * Traslacion Y: la base gira, con las pinzas abiertas
  */
 void Robot::preparaY() {
-    Serial.println("preparaY");
+    // Serial.println("preparaY");
     setServo(servoPinza, PINZA_ABIERTA, 230);
     // Solo lo hara para hacer luego una X, asi que ya pongo la grua
     setServo(servoGrua, GRUA_MITAD,230);
@@ -71,7 +71,7 @@ void Robot::preparaY() {
  * Giro: giro normal de la cara de abajo
  */
 void Robot::preparaGiro() {
-    Serial.println("* preparaGiro");
+    // Serial.println("* preparaGiro");
     if (servoPinza.read()!=PINZA_SEMI)
         setServo(servoPinza, PINZA_SEMI, 80);
     setServo(servoGrua, GRUA_MITAD, 120);
@@ -82,8 +82,8 @@ void Robot::preparaGiro() {
  * Traslacion X: utilizando grua arriba y abajo
  */
 void Robot::preparaX(int giros) {
-    Serial.print("* preparaX");
-    Serial.println(giros);
+    // Serial.print("* preparaX");
+    // Serial.println(giros);
     setServo(servoPinza, PINZA_SEMI, 100);
     setServo(servoGrua, GRUA_ABAJO, 140);
     if (giros==2 && servoMuneca.read()==MUNECA1) {
@@ -93,18 +93,14 @@ void Robot::preparaX(int giros) {
         setServo(servoMuneca, MUNECA1, 250);
     } else if (giros==-1 && servoMuneca.read()<MUNECA1) {
         setServo(servoMuneca, MUNECA1, 250);
-    } else {
-        // sin no movi los servos, espero un poquito por la grua
-        Serial.println("no movi los servos");
-        //delay(100);
     }
 
     setServo(servoPinza, PINZA_CERRADA, 250);
 }
 
 void Robot::traslacionX(int giros) {
-    Serial.print("* traslacion X");
-    Serial.println(giros);
+    // Serial.print("* traslacion X");
+    // Serial.println(giros);
     setServo(servoGrua, GRUA_ARRIBA, 70);
     switch (giros) {
         case 2:
@@ -112,7 +108,7 @@ void Robot::traslacionX(int giros) {
             setServo(servoGrua, GRUA_ABAJO, 190);
             break;
         case -1:
-            setServo(servoMuneca, servoMuneca.read()+ giros*70,200);
+            setServo(servoMuneca, servoMuneca.read()+ giros*70,150);
             setServo(servoGrua, GRUA_ABAJO, 190);
             setServo(servoMuneca, servoMuneca.read()+ giros*20,150);
             break;
@@ -148,8 +144,8 @@ void Robot::giraBase(int caras) {
 
     int i1,i2,i3,i4;
 
-    Serial.print("gira base ");
-    Serial.println(caras);
+    // Serial.print("gira base ");
+    // Serial.println(caras);
     abscaras=caras>0?caras:-caras;
 
     //maxspeed=10;
@@ -189,9 +185,9 @@ void Robot::giraBase(int caras) {
         do1step(&base, 1);
         delay(base.speed);
     }
-    setServo(servoPinza, PINZA_SEMI, 101);
 
-    delay(300);
+    delay(100);
+    setServo(servoPinza, PINZA_SEMI, 101);
     apagarMotor(base);
 }
 

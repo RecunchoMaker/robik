@@ -1,0 +1,13 @@
+# Some demo software for Robik
+
+Here are some little python programs to play with Robik.
+
+## Patrones
+
+This is a simple demo: just run it and Robik will do random nice patterns with the cube.
+
+
+## Solver
+
+This is a simple for a Rubik's cube, using "CFOP" (cross, F2l, OLL and PLL). There are room for a lot of improvement here!. You need OpenCV for python and a webcam.
+
