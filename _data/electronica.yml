@@ -85,7 +85,7 @@
 - titulo: Conectando el pin de 12v
   foto: img/elec-110-cable-12v.jpg
   texto: <p>
-                        Ya s&oacute;lo nos falta soldar tres cables a nuestra placa (tierra, 5v y 12v) que ser&aacute;n los que conectemos a nuestra fuente de alimentaci&oacute;n
+                        Ya s&oacute;lo nos falta soldar tres cables a nuestra placa (tierra, 5v y 12v) que ser&aacute;n los que conectemos a nuestra fuente de alimentaci&oacute;n.
                     </p>
                     <p>
                         Pelamos un trozo de cable, lo pasamos por uno de los agujeros del borde de la placa y lo soldamos. Desde esa misma soldadura sacamos un cable que uniremos a uno de los pines de la hilera de 2 (esta ser&aacute; la toma de 12v para el driver) 
@@ -107,7 +107,7 @@
 - titulo: Doblar los pines
   foto: img/elec-137-doblarpines.jpg
   texto: <p>
-                        Para que el escudo encaje en el arduino, debemos acercar suavemente los pines de la hilera de 6 y 4. Utiliza las u&ntilde;as, de 2 en dos, y d&oacute;blalos un pel&iacute;n hasta que compruebes que entran perfectamente
+                        Para que el escudo encaje en el arduino, debemos acercar suavemente los pines de la hilera de 6 y 4. Utiliza las u&ntilde;as, de 2 en dos, y d&oacute;blalos un pel&iacute;n hasta que compruebes que entran perfectamente.
                     </p>
 
 - titulo: Comprueba las conexiones

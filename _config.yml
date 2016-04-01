@@ -6,16 +6,14 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Robik - El robot imprimible que puede mover el cubo de Rubik
+email: robik@recunchomaker.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Robik es un pequeno robot imprimible open hardware basado
+  en Arduino que puede mover el cubo de rubik a traves de
+  comandos por el puerto serie. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://recunchomaker.org/robik" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown

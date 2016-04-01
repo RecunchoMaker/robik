@@ -22,7 +22,7 @@
 - componente: Perfboard
   imagen: img/elec-perfboard.jpg
   cantidad: 1
-  descripcion: No es necesario, pero para dejar los cables un poco m&aacute;s ordenados es conveniente hacer un peque&ntilde;o escudo con una perfboard y unos pocos pines
+  descripcion: No es necesario, pero para dejar los cables un poco m&aacute;s ordenados es conveniente hacer un peque&ntilde;o escudo con una perfboard y unos pocos pines.
 
 - componente: Pines macho
   imagen: img/elec-pinchos.jpg

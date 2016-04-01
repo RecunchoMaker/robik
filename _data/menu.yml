@@ -18,12 +18,3 @@
 - titulo: FAQ
   url: faq.html
 
-- titulo: Enlaces
-  url: enlaces.html
-  submenu:
-    - titulo: Facebook
-      url: http://facebook.com/recunchomaker
-    - titulo: Twitter
-      url: http://facebook.com/recunchomaker
-    - titulo: e-mail
-      url: mailto:robik@recunchomaker.org
