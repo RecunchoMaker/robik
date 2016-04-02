@@ -65,7 +65,7 @@ class Robot:
 
     def __init__(self):
         self.tty = '/dev/ttyUSB0'
-        #self.serial = serial.Serial(self.tty, timeout=0.01)
+        self.serial = serial.Serial(self.tty, timeout=0.01)
 
     def read(self):
         self.line = self.serial.readline()
