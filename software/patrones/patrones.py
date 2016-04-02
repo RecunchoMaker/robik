@@ -47,23 +47,25 @@ class Patrones:
 
     def get_secuencia_inversa(self):
         res = self.patron[1] + " "
-        for m in 'LRUDFB':
-            res = res.replace(m + " ",m + "# ") # auxiliar
-            res = res.replace(m + "' ",m + " ")
-            res = res.replace(m + "# ",m + "' ")
-        return res.replace(" ",'')
+        rev = ""
+        for r in reversed(res.split(' ')):
+            rev = rev + r + " "
 
+        for m in 'LRUDFB':
+            rev = rev.replace(m + " ",m + "# ") # auxiliar
+            rev = rev.replace(m + "' ",m + " ")
+            rev = rev.replace(m + "# ",m + "' ")
+        return rev.replace(" ",'')
 
     def limpia_secuencia(self, sec):
         return sec.replace(" ",'')
-
 
 
 class Robot:
 
     def __init__(self):
         self.tty = '/dev/ttyUSB0'
-        self.serial = serial.Serial(self.tty, timeout=0.01)
+        #self.serial = serial.Serial(self.tty, timeout=0.01)
 
     def read(self):
         self.line = self.serial.readline()
@@ -96,17 +98,18 @@ if __name__ == "__main__":
         print "--------------------------------------------------------------------------------"
         print "   " + p.get_secuencia()
         print "       (retrocedo con : " + p.get_secuencia_inversa() + ")"
+
         r.write('seq ' + p.get_secuencia())
         r.write('pa')                                                                                         
         r.write('ba 4')                                                                                       
         r.write('pa')                                                                                         
-        r..write('ba -4')     
+        r.write('ba -4')     
         time.sleep(10);
         r.write('seq ' + p.get_secuencia_inversa())
         r.write('pa')                                                                                         
         r.write('ba 4')                                                                                       
         r.write('pa')                                                                                         
-        r..write('ba -4')     
+        r.write('ba -4')     
         time.sleep(5);
 
 
