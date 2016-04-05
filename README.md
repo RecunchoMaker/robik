@@ -1,7 +1,5 @@
 # Robik files
 
-__IMPORTANT__: Firmware, software, 3d model and documentation on the web page are not finished yet, we are on it!. We hope to be ready on April 2016.
-
 Here are all the files needed to build Robik, a *rubik-cube-manipulator printbot*, including Arduino firmware, the 3d model, and simple software demos.
 
 More info about Robik, including build instructions,  at [recunchomaker.org/robik][ROB01]
