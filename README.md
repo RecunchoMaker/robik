@@ -13,4 +13,4 @@ This is an early -but functional- release. Feel free to explore. All suggestions
 * __software__: contains the source code to same *utilities* to play with the robot including a Rubik solver (webcam required)
 
 <!-- links -->
-[ROB01]: http://recunchomaker.org/robik
+[ROB01]: https://github.com/RecunchoMaker/robik
